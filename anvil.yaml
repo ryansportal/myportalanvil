@@ -9,4 +9,21 @@ runtime_options:
   server_version: python3-sandbox
   server_spec: {base: python310-standard}
 dependencies: []
-services: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+db_schema:
+  categories:
+    title: categories
+    client: none
+    server: full
+    columns:
+    - name: type
+      admin_ui: {width: 200}
+      type: string
+  suggestions:
+    title: suggestions
+    client: none
+    server: full
+    columns: []
