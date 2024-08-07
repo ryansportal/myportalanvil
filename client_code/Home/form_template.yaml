@@ -3,30 +3,6 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
 components:
-- name: column_panel_1
-  properties: {}
-  type: ColumnPanel
-  layout_properties: {slot: left-nav}
-  components:
-  - name: H_home_button
-    properties: {text: Home}
-    type: Link
-    layout_properties: {grid_position: 'TFDASJ,LSZXAA'}
-    event_bindings: {click: H_home_button_click}
-  - name: H_feedback_button
-    properties: {text: Feedback}
-    type: Link
-    layout_properties: {grid_position: 'AJJFEA,BFCPDO'}
-    event_bindings: {click: H_feedback_button_click}
-  - name: link_1
-    properties: {text: PayProp Requests}
-    type: Link
-    layout_properties: {grid_position: 'WJMCBX,WTGQBD'}
-  - name: column_panel_2
-    properties: {spacing_below: large, spacing_above: large}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'UCQQID,SUZYSA'}
-    components: []
 - name: home_description
   properties: {content: 'Home:'}
   type: RichText
@@ -39,12 +15,8 @@ components:
     - name: text_area_1
       properties: {text: 'A place and a space to submit requests, preview the roadmap and view all suggestions.  '}
       type: TextArea
-      layout_properties: {}
+      layout_properties: {column: 'null'}
   - name: template_1
     properties: {}
     type: form:Template
-- name: label_1
-  properties: {text: Road Map, icon: 'fa:map-o', icon_align: right_edge, spacing_below: large, spacing_above: large}
-  type: Label
-  layout_properties: {slot: title}
 custom_component: false

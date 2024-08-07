@@ -1,4 +1,4 @@
-from ._anvil_designer import TemplateTemplate
+from ._anvil_designer import PayProp_RequestsTemplate
 from anvil import *
 import anvil.users
 import anvil.server
@@ -7,12 +7,12 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class Template(TemplateTemplate):
+class PayProp_Requests(PayProp_RequestsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  #Link Nav Bar
+    #Link Nav Bar
   def H_home_button_click(self, **event_args):
     open_form("Home")
   def H_feedback_button_click(self, **event_args):

@@ -1,5 +1,6 @@
 from ._anvil_designer import FeedbackTemplate
 from anvil import *
+import anvil.users
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
@@ -34,16 +35,20 @@ class Feedback(FeedbackTemplate):
   def submit_button_click(self, **event_args):
     if self.validate_fields():
       anvil.server.call(
-        "add_suggestion", self.suggestion_box.text, self.category_dd.selected_value,
+        "add_suggestion", self.suggestion_box.text, self.category_dd.selected_value, self.file_loader,
       )
       alert("Form submitted")
       self.clear_inputs()
 
 
-  def fb_home_button_click(self, **event_args):
-    open_form('Home')
-
-  def fb_feedback_button_click(self, **event_args):
-   open_form('Feedback')
+  #Link Nav Bar
+  def H_home_button_click(self, **event_args):
+    open_form("Home")
+  def H_feedback_button_click(self, **event_args):
+    open_form("Feedback")
+  def H_PP_Requests_click(self, **event_args):
+    open_form("PayProp_Requests")
+  def h_roadmap_click(self, **event_args):
+    open_form("RoadMap")
 
   
