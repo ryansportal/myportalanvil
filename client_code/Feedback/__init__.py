@@ -3,8 +3,8 @@ from anvil import *
 import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
-from anvil.tables import 
-import datetime
+from anvil.tables import app_tables
+
 
 
 
@@ -34,7 +34,7 @@ class Feedback(FeedbackTemplate):
   def submit_button_click(self, **event_args):
     if self.validate_fields():
       anvil.server.call(
-        "add_suggestion", self.suggestion_box.text, self.category_dd.selected_value, 
+        "add_suggestion", self.suggestion_box.text, self.category_dd.selected_value,
       )
       alert("Form submitted")
       self.clear_inputs()
