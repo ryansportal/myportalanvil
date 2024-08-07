@@ -1,0 +1,5 @@
+is_package: true
+container:
+  type: DataRowPanel
+  event_bindings: {refreshing_data_bindings: form_refreshing_data_bindings}
+components: []

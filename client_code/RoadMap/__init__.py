@@ -12,12 +12,16 @@ class RoadMap(RoadMapTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  #Link Nav Bar
-  def H_home_button_click(self, **event_args):
-    open_form("Home")
-  def H_feedback_button_click(self, **event_args):
-    open_form("Feedback")
-  def H_PP_Requests_click(self, **event_args):
-    open_form("PayProp_Requests")
-  def h_roadmap_click(self, **event_args):
-    open_form("RoadMap")
+   #Link Nav Bar
+
+  def home_button_click(self, **event_args):
+    open_form('Home')
+
+  def feedback_button_click(self, **event_args):
+    open_form('Feedback')
+
+  def roadmap_buttton_click(self, **event_args):
+   open_form('RoadMap')
+
+  def payprop_requests_button_click(self, **event_args):
+    open_form('PayProp_Requests')
