@@ -11,7 +11,7 @@ components:
   - name: template_1
     properties: {}
     type: form:Template
-    layout_properties: {grid_position: 'AQVDID,QGNUXH'}
+    layout_properties: {grid_position: 'DVGKSC,RSRMHJ'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

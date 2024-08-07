@@ -3,20 +3,45 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
 components:
-- name: home_description
-  properties: {content: 'Home:'}
-  type: RichText
-  layout_properties: {slot: default}
+- name: outlined_card_1
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {slot: nav-right}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: top-left-btn}
+- name: grid_panel_1
+  properties: {}
+  type: GridPanel
+  layout_properties: {slot: left-nav}
   components:
-  - name: data_row_panel_1
+  - name: column_panel_2
     properties: {}
-    type: DataRowPanel
-    components:
-    - name: text_area_1
-      properties: {text: 'A place and a space to submit requests, preview the roadmap and view all suggestions.  '}
-      type: TextArea
-      layout_properties: {column: 'null'}
-  - name: template_1
-    properties: {}
-    type: form:Template
+    type: ColumnPanel
+    layout_properties: {row: BLGCTD, width_xs: 12, col_xs: 0}
+  - name: home_button
+    properties: {text: Home}
+    type: Link
+    layout_properties: {row: TBZIEJ, width_xs: 12, col_xs: 0}
+  - name: feedback_button
+    properties: {text: Feedback}
+    type: Link
+    layout_properties: {row: NRWVAU, width_xs: 12, col_xs: 0}
+  - name: roadmap_buttton
+    properties: {text: RoadMap}
+    type: Link
+    layout_properties: {row: OFZZHV, width_xs: 12, col_xs: 0}
+  - name: payprop_requests_button
+    properties: {text: PayProp Requests}
+    type: Link
+    layout_properties: {row: FMOMJR, width_xs: 12, col_xs: 0}
+  - name: image_1
+    properties: {spacing_below: large, spacing_above: large}
+    type: Image
+    layout_properties: {row: AHOWJA, width_xs: 12, col_xs: 0}
+- name: label_1
+  properties: {}
+  type: Label
+  layout_properties: {slot: title}
 custom_component: false
