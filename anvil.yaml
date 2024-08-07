@@ -16,14 +16,21 @@ services:
 db_schema:
   categories:
     title: categories
-    client: none
+    client: search
     server: full
     columns:
-    - name: type
-      admin_ui: {width: 200}
+    - name: name
+      admin_ui: {order: 0, width: 200}
       type: string
-  suggestions:
-    title: suggestions
-    client: none
+  suggestions_2:
+    client: full
     server: full
-    columns: []
+    columns:
+    - name: text
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: type
+      admin_ui: {order: 1, width: 200}
+      type: link_single
+      target: categories
+    title: suggestions

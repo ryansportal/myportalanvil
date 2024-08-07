@@ -1,0 +1,22 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components: []
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: label_1
+  properties: {text: Home}
+  type: Label
+  layout_properties: {slot: title}
+- name: home_box
+  properties: {text: Home}
+  type: TextBox
+  layout_properties: {slot: left-nav}
