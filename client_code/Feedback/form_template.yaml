@@ -1,29 +1,22 @@
+properties:
+- {name: prop, type: string, default_value: '', important: true, default_binding_prop: true}
 is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+events:
+- {name: event, default_event: true}
+custom_component: false
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}', visible: true}
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: outlined_card_1
-    properties: {role: outlined-card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'HBYXGH,LTPRXZ'}
-    components:
-    - name: label_1
-      properties: {text: UK Requests, align: center, bold: true}
-      type: Label
-      layout_properties: {grid_position: 'FEJUYB,SXVXUI'}
   - name: outlined_card_2
     properties: {role: outlined-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'PUPJGL,UKLKWW'}
     components:
     - name: label_suggestion
-      properties: {text: Suggestion}
+      properties: {text: Suggestion, align: center, bold: false, role: headline}
       type: Label
       layout_properties: {grid_position: 'DLXJFZ,MJVSNG'}
     - name: suggestion_box
@@ -48,11 +41,26 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components: []
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: fb_home_button
+    properties: {text: Home}
+    type: Link
+    layout_properties: {grid_position: 'XZFQGF,FLPFNU'}
+    event_bindings: {click: fb_home_button_click}
+  - name: fb_feedback_button
+    properties: {text: Feedback}
+    type: Link
+    layout_properties: {grid_position: 'RGMOOE,XUQZXU'}
+    event_bindings: {click: fb_feedback_button_click}
 - name: UK
-  properties: {text: UK}
+  properties: {text: Feedback, role: title}
   type: Label
   layout_properties: {slot: title}
-- name: home_button
-  properties: {text: Home, role: outlined-button}
-  type: Button
-  layout_properties: {slot: left-nav}
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}

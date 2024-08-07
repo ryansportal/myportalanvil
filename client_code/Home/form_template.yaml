@@ -1,0 +1,42 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}', visible: true}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: home_description
+    properties: {content: 'A place and a space to submit feedback and view outstanding requests. '}
+    type: RichText
+    layout_properties: {grid_position: 'NAUBFQ,PXSLEI'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - name: image_1
+    properties: {height: 67, source: _/theme/pp-icon.png}
+    type: Image
+- name: UK
+  properties: {text: Home}
+  type: Label
+  layout_properties: {slot: title}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: H_home_button
+    properties: {text: Home}
+    type: Link
+    layout_properties: {grid_position: 'TFDASJ,LSZXAA'}
+    event_bindings: {click: H_home_button_click}
+  - name: H_feedback_button
+    properties: {text: Feedback}
+    type: Link
+    layout_properties: {grid_position: 'AJJFEA,BFCPDO'}
+    event_bindings: {click: H_feedback_button_click}
+slots: {}
