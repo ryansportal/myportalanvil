@@ -33,10 +33,20 @@ class PayProp_Requests(PayProp_RequestsTemplate):
         if data:
           first_item = data [0]
           self.title_label.text = first_item ['type']
-          self.author_label.text = first_item ['text']
+          self.text_label.text = first_item ['text']
       
 
-  
+data = anvil.server.call('database_form')
+print(f"Data received in form: {data}")  # Debugging output
+
+        # Ensure data is processed correctly
+   if data:
+            first_item = data[0]
+            print(f"First item: {first_item}")  # Debugging output
+            self.title_label.text = first_item['type']
+            self.text_label.text = first_item['text']
+        else:
+            print("No data received")  # If data is empty
 
  
       
