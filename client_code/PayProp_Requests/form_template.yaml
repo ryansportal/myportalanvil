@@ -45,16 +45,15 @@ components:
   properties: {text: PayProp Requests}
   type: Label
   layout_properties: {slot: title}
-- name: data_grid_1
+- name: database_form
   properties:
     columns:
-    - {id: JKSDUP, title: Type, data_key: column_1}
-    - {id: VJQQOR, title: Feedback, data_key: column_2}
-    - {id: OJLQEN, title: Created, data_key: column_3}
+    - {id: JKSDUP, title: type, data_key: column_1}
+    - {id: VJQQOR, title: text, data_key: column_2}
+    - {id: OJLQEN, title: Column 3, data_key: column_3}
   type: DataGrid
   components:
   - name: repeating_panel_1
-    properties: {item_template: PayProp_Requests.RowTemplate1}
+    properties: {item_template: PayProp_Requests.RowTemplate2}
     type: RepeatingPanel
-    event_bindings: {show: repeating_panel_1_show}
   layout_properties: {slot: default}

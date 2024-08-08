@@ -9,4 +9,7 @@ from datetime import datetime
 def add_suggestion(text, type):
   app_tables.suggestions_2.add_row(text=text, type=type, created=datetime.now())
 
+def database_form():
+  return app_tables.suggestions_2.search()
 
+  
