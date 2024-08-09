@@ -14,27 +14,68 @@ class PayProp_Requests(PayProp_RequestsTemplate):
           # Example coordinates for the marker
         latitude = 51.271240
         longitude = 0.191750
+      
+        base64_icon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAP1BMVEXbNSn////ZHQb22djYEgDaKBj109LroJ3niobaKxzZIAzzzcvaJRTWAADwubfbLiHjc2733tzlg37gX1jrpKEDjV34AAABNElEQVR4nO3bsW6DMBiF0RQIgZKE0Ob9n7WLWWoGTEX+UJ0zX1n6Vss+nQAAAAAAAAAAAAAAAADgvVyrvV2DA+/13u6xiVX9sbe6UqhQoUKFChUqVKhQoUKFChXGFA7tVsNBCm+fW90OUthsPq5R+HoKCykMoLCQwgAKCykMoLCQwgAKCykMoLCQwgAKCykMoLCQwgAKCykMoLCQwgAKCykMoLDQgQvHhYcXYz47buH4aIff2keeeNzCvluYdX22UxhAYaJwpjCAwkThTGEAhYnCmcIAChOFM4UB/lL41fyjPzOLhdNx/z2tLFxJ4c4UJgoVBlKYKFQYSGGiUGEghYnCdy6cdi+cYgv77pJ5nrPZ+P3MdystXFi9VH/OLczGhdlKwYEAAAAAAAAAAAAAAAAAkPkBqLktxBvvZ98AAAAASUVORK5CYII="
+
 
         # Create a marker using the correct syntax
         marker = GoogleMap.Marker(
             position=GoogleMap.LatLng(latitude, longitude),  # Position of the marker
             title="UK",  # Title when hovering over the marker
-            label="UK"  # A short label for the marker
+            icon={
+                'url': base64_icon,  # Base64 encoded image data
+                'scaledSize': GoogleMap.Size(30, 30)  # Resize the icon (width, height in pixels)
+            }
         )
-
+      
+              # Example coordinates for the second marker
         latitudesa = -30.559483
         longitudesa = 22.937506
+
+     # Create the second marker with a custom icon
         markersa = GoogleMap.Marker(
-        position=GoogleMap.LatLng(latitudesa, longitudesa),
-        title="SA",
-        label="SA",
-        icon= "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAP1BMVEXbNSn////ZHQb22djYEgDaKBj109LroJ3niobaKxzZIAzzzcvaJRTWAADwubfbLiHjc2733tzlg37gX1jrpKEDjV34AAABNElEQVR4nO3bsW6DMBiF0RQIgZKE0Ob9n7WLWWoGTEX+UJ0zX1n6Vss+nQAAAAAAAAAAAAAAAADgvVyrvV2DA+/13u6xiVX9sbe6UqhQoUKFChUqVKhQoUKFChXGFA7tVsNBCm+fW90OUthsPq5R+HoKCykMoLCQwgAKCykMoLCQwgAKCykMoLCQwgAKCykMoLCQwgAKCykMoLCQwgAKCykMoLDQgQvHhYcXYz47buH4aIff2keeeNzCvluYdX22UxhAYaJwpjCAwkThTGEAhYnCmcIAChOFM4UB/lL41fyjPzOLhdNx/z2tLFxJ4c4UJgoVBlKYKFQYSGGiUGEghYnCdy6cdi+cYgv77pJ5nrPZ+P3MdystXFi9VH/OLczGhdlKwYEAAAAAAAAAAAAAAAAAkPkBqLktxBvvZ98AAAAASUVORK5CYII="
-      )
+            position=GoogleMap.LatLng(latitudesa, longitudesa),
+            title="SA",
+            icon={
+                'url': base64_icon,  # Base64 encoded image data
+                'scaledSize': GoogleMap.Size(30, 30)  # Resize the icon (width, height in pixels)
+            }
+        )
+
+                    # Example coordinates for the second marker
+        latitudeus = -45.4279545,
+        longitudeus = -75.6958721
+
+     # Create the second marker with a custom icon
+        markerus = GoogleMap.Marker(
+            position=GoogleMap.LatLng(latitudeus, longitudeus),
+            title="US",
+            icon={
+                'url': base64_icon,  # Base64 encoded image data
+                'scaledSize': GoogleMap.Size(30, 30)  # Resize the icon (width, height in pixels)
+            }
+        )
+
+                          # Example coordinates for the second marker
+        latitudeca = -62.393303
+        longitudeca = -96.8181455
+
+     # Create the second marker with a custom icon
+        markerca = GoogleMap.Marker(
+            position=GoogleMap.LatLng(latitudeca, longitudeca),
+            title="CA",
+            icon={
+                'url': base64_icon,  # Base64 encoded image data
+                'scaledSize': GoogleMap.Size(30, 30)  # Resize the icon (width, height in pixels)
+            }
+        )
 
       
         # Add the marker to the GoogleMap component
         self.map_1.add_component(marker)
         self.map_1.add_component(markersa)
+        self.map_1.add_component(markerus)
+        self.map_1.add_component(markerca)
 
         
  
