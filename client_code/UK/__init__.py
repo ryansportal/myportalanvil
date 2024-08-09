@@ -13,10 +13,6 @@ class UK(UKTemplate):
     self.init_components(**properties)
 
 
-        # Call the server function and display the data
-    data = anvil.server.call('get_data')
-    self.data_grid_1.items = data
-   
   
 #Nav
   def home_button_click(self, **event_args):
