@@ -36,9 +36,9 @@ components:
   - name: data_grid_1
     properties:
       columns:
-      - {id: JKSDUP, title: Suggestions, data_key: text, expand: false}
-      - {id: VJQQOR, title: Category, data_key: type}
-      - {id: OJLQEN, title: Created, data_key: created}
+      - {id: LVXQZU, data_key: feature, title: feature}
+      - {id: AMJNEG, data_key: category, title: category}
+      - {id: SKJTQK, data_key: created, title: created}
     type: DataGrid
     components:
     - name: repeating_panel_1

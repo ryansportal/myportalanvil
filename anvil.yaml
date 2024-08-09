@@ -26,21 +26,36 @@ db_schema:
     - name: name
       admin_ui: {width: 200}
       type: string
-  uk:
-    title: suggestions_uk
+  suggestions_sa:
     client: full
     server: full
     columns:
-    - name: text
-      admin_ui: {width: 504}
+    - name: feature
+      admin_ui: {width: 200, order: 0}
       type: string
-    - name: type
-      admin_ui: {width: 200}
+    - name: created
+      admin_ui: {order: 4, width: 200}
+      type: datetime
+    - name: category
+      admin_ui: {width: 200, order: 3}
+      type: link_single
+      target: categories
+    title: suggestions_sa
+  suggestions_uk:
+    client: full
+    server: full
+    columns:
+    - name: feature
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: category
+      admin_ui: {width: 200, order: 1}
       type: link_single
       target: categories
     - name: created
-      admin_ui: {width: 200}
+      admin_ui: {width: 200, order: 2}
       type: datetime
+    title: suggestions_uk
 startup: {type: form, module: Home}
 native_deps: null
 uplink_visible: true

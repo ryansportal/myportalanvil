@@ -33,6 +33,18 @@ components:
       type: Link
       layout_properties: {grid_position: 'JRHJXU,CTINWH'}
       event_bindings: {click: link_4_click}
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: WYXARR, data_key: feature, title: feature}
+      - {id: ZOMMXG, data_key: category, title: category}
+      - {id: XXKTLZ, data_key: created, title: created}
+    type: DataGrid
+    components:
+    - name: repeating_panel_1
+      properties: {item_template: South_Africa.RowTemplate2}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'SJVPTW,KJLECH'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
