@@ -38,7 +38,7 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
 - name: label_1
-  properties: {text: South_Africa}
+  properties: {text: South Africa}
   type: Label
   layout_properties: {slot: title}
 - name: grid_panel_1
