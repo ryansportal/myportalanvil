@@ -36,15 +36,9 @@ components:
   - name: data_grid_UK
     properties:
       columns:
-      - {id: JKSDUP, title: '<Label text="{{item[''text'']}}"', data_key: column_1}
-      - id: VJQQOR
-        title: |
-          <Label text="{{item['type']}}" />
-        data_key: column_2
-      - id: OJLQEN
-        title: |
-          <Label text="{{item['created']}}" />
-        data_key: column_3
+      - {id: JKSDUP, title: text, data_key: column_1}
+      - {id: VJQQOR, title: type, data_key: column_2}
+      - {id: OJLQEN, title: created, data_key: column_3}
       role: tonal-data-grid
     type: DataGrid
     components:
