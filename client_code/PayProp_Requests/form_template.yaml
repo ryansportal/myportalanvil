@@ -82,6 +82,7 @@ components:
       layout_properties: {grid_position: 'JRHJXU,CTINWH'}
       event_bindings: {click: link_4_click}
   - name: map_1
-    properties: {height: 493}
+    properties: {height: 493, spacing_above: large, disable_default_ui: false}
     type: GoogleMap
     layout_properties: {grid_position: 'OIQSDT,RRMBKI'}
+    event_bindings: {}
