@@ -12,6 +12,8 @@ class PayProp_Requests(PayProp_RequestsTemplate):
   def __init__(self, **properties):
      # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    data = anvil.server.call('get_suggestions_data')
+    self.repeating_panel.items = data
 
     #Link Nav Bar
   def home_button_click(self, **event_args):
@@ -23,30 +25,13 @@ class PayProp_Requests(PayProp_RequestsTemplate):
    open_form('RoadMap')
   def payprop_requests_button_click(self, **event_args):
     open_form('PayProp_Requests')
+
+
+
+
   
-  
-  class PayProp_Requests(PayProp_RequestsTemplate):
-    def __init__(self, **properties):
-        self.init_components(**properties)
-        data = anvil.server.call('database_form')
 
-        if data:
-          first_item = data [0]
-          self.title_label.text = first_item ['type']
-          self.text_label.text = first_item ['text']
-      
 
-data = anvil.server.call('database_form')
-print(f"Data received in form: {data}")  # Debugging output
-
-        # Ensure data is processed correctly
-   if data:
-            first_item = data[0]
-            print(f"First item: {first_item}")  # Debugging output
-            self.title_label.text = first_item['type']
-            self.text_label.text = first_item['text']
-        else:
-            print("No data received")  # If data is empty
 
  
       

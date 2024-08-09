@@ -48,12 +48,13 @@ components:
 - name: database_form
   properties:
     columns:
-    - {id: JKSDUP, title: type, data_key: column_1}
-    - {id: VJQQOR, title: text, data_key: column_2}
-    - {id: OJLQEN, title: Column 3, data_key: column_3}
+    - {id: JKSDUP, title: text, data_key: text}
+    - {id: VJQQOR, title: type, data_key: type}
+    - {id: OJLQEN, title: created, data_key: created}
+    rows_per_page: 50
   type: DataGrid
   components:
-  - name: repeating_panel_1
+  - name: repeating_panel
     properties: {item_template: PayProp_Requests.RowTemplate2}
     type: RepeatingPanel
   layout_properties: {slot: default}
