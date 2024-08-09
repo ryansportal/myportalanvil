@@ -1,4 +1,4 @@
-from ._anvil_designer import ItemTemplate4Template
+from ._anvil_designer import UKTemplate
 from anvil import *
 import anvil.server
 import anvil.users
@@ -7,7 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class ItemTemplate4(ItemTemplate4Template):
+class UK(UKTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)

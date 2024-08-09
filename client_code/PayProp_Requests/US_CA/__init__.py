@@ -1,4 +1,4 @@
-from ._anvil_designer import ItemTemplate5Template
+from ._anvil_designer import US_CATemplate
 from anvil import *
 import anvil.server
 import anvil.users
@@ -7,7 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class ItemTemplate5(ItemTemplate5Template):
+class US_CA(US_CATemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
