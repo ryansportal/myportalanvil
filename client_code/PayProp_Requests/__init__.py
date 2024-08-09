@@ -43,8 +43,8 @@ class PayProp_Requests(PayProp_RequestsTemplate):
         )
 
                     # Example coordinates for the second marker
-        latitudeus = -45.4279545,
-        longitudeus = -75.6958721
+        latitudeus = 35.4279545,
+        longitudeus = -100.6958721
 
      # Create the second marker with a custom icon
         markerus = GoogleMap.Marker(
@@ -57,8 +57,8 @@ class PayProp_Requests(PayProp_RequestsTemplate):
         )
 
                           # Example coordinates for the second marker
-        latitudeca = -62.393303
-        longitudeca = -96.8181455
+        latitudeca = 50.393303
+        longitudeca = -99.8181455
 
      # Create the second marker with a custom icon
         markerca = GoogleMap.Marker(
@@ -76,6 +76,10 @@ class PayProp_Requests(PayProp_RequestsTemplate):
         self.map_1.add_component(markersa)
         self.map_1.add_component(markerus)
         self.map_1.add_component(markerca)
+      
+
+
+     
 
         
  
@@ -98,4 +102,3 @@ class PayProp_Requests(PayProp_RequestsTemplate):
     def link_4_click(self, **event_args):
       open_form('US_CA')
 
-     

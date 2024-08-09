@@ -6,7 +6,7 @@ import anvil.server
 from datetime import datetime
 import requests
 
+
 @anvil.server.callable
 def add_suggestion(text, type):
-  app_tables.suggestions_2.add_row(text=text, type=type, created=datetime.now())
-
+  app_tables.suggestions_uk.add_row(text=text, type=type, created=datetime.now())
