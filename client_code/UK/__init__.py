@@ -11,6 +11,13 @@ class UK(UKTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.load_data()  # Call load_data() to fetch and display data
+
+  def load_data(self):
+        # Fetch data from the server
+    suggestions = anvil.server.call('get_suggestions_UK')
+        # Bind data to the Repeating Panel
+    self.repeating_panel.items = suggestions
     
 
 
