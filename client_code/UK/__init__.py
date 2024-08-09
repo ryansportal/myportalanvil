@@ -11,19 +11,43 @@ class UK(UKTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+#Nav
   def home_button_click(self, **event_args):
     open_form('Home')
-
   def feedback_button_click(self, **event_args):
     open_form('Feedback')
-
   def roadmap_buttton_click(self, **event_args):
    open_form('RoadMap')
-
   def payprop_requests_button_click(self, **event_args):
     open_form('PayProp_Requests')
-
   def link_1_click(self, **event_args):
       open_form('Global')
   def link_2_click(self, **event_args):
@@ -32,5 +56,3 @@ class UK(UKTemplate):
       open_form('South_Africa')
   def link_4_click(self, **event_args):
       open_form('US_CA')
-
-    # Any code you write here will run before the form opens.

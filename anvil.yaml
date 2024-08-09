@@ -28,8 +28,8 @@ db_schema:
       type: string
   suggestions_uk:
     title: suggestions_uk
-    client: full
-    server: full
+    client: none
+    server: none
     columns:
     - name: text
       admin_ui: {width: 504}
