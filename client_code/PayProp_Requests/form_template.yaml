@@ -7,6 +7,7 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components: []
 - name: column_panel_2
   properties: {}
   type: ColumnPanel
@@ -45,16 +46,20 @@ components:
   properties: {text: PayProp Requests}
   type: Label
   layout_properties: {slot: title}
-- name: database_form
-  properties:
-    columns:
-    - {id: JKSDUP, title: text, data_key: text}
-    - {id: VJQQOR, title: type, data_key: type}
-    - {id: OJLQEN, title: created, data_key: created}
-    rows_per_page: 50
-  type: DataGrid
-  components:
-  - name: repeating_panel
-    properties: {item_template: PayProp_Requests.RowTemplate2}
-    type: RepeatingPanel
+- name: column_panel_3
+  properties: {}
+  type: ColumnPanel
   layout_properties: {slot: default}
+  components:
+  - name: task_name
+    properties: {item_template: PayProp_Requests.ItemTemplate3}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'CPYLAO,OOPCBS'}
+  - name: repeating_panel_2
+    properties: {item_template: PayProp_Requests.ItemTemplate4}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'CPYLAO,SZREHQ'}
+  - name: repeating_panel_3
+    properties: {item_template: PayProp_Requests.ItemTemplate5}
+    type: RepeatingPanel
+    layout_properties: {grid_position: 'CPYLAO,PXHFFN'}

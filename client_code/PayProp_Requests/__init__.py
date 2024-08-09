@@ -12,8 +12,21 @@ class PayProp_Requests(PayProp_RequestsTemplate):
   def __init__(self, **properties):
      # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    data = anvil.server.call('get_suggestions_data')
-    self.repeating_panel.items = data
+    self.load_asana_tasks()
+
+  def load_asana_tasks(self):
+    tasks = anvil.server.call('get_asana_tasks')
+
+    if 'error' in tasks:
+      alert(tasks['error'])
+    else:
+      self.display_tasks(tasks)
+
+  def display_tasks(self, tasks):
+    self.repeating_panel.items = tasks
+ 
+  #   data = anvil.server.call('get_suggestions_data')
+
 
     #Link Nav Bar
   def home_button_click(self, **event_args):
