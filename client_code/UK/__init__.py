@@ -12,9 +12,14 @@ class UK(UKTemplate):
     self.init_components(**properties)
 
 
-
-
-  
+     # Load the data into the RepeatingPanel
+    self.load_suggestions_data()
+    
+  def load_suggestions_data(self):
+    suggestions_data = anvil.server.call('get_suggestions_data')  # Call the server function
+    self.repeating_panel.items = suggestions_data  # Assuming you have a RepeatingPanel to display the data
+   
+   
   
 #Nav
   def home_button_click(self, **event_args):
@@ -33,3 +38,6 @@ class UK(UKTemplate):
       open_form('South_Africa')
   def link_4_click(self, **event_args):
       open_form('US_CA')
+
+  def data_grid_UK_show(self, **event_args):
+   self.repeating_panel = self.load_suggestions_data()

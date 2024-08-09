@@ -33,20 +33,11 @@ components:
       type: Link
       layout_properties: {grid_position: 'JRHJXU,CTINWH'}
       event_bindings: {click: link_4_click}
-  - name: data_grid_UK
-    properties:
-      columns:
-      - {id: JKSDUP, title: text, data_key: column_1}
-      - {id: VJQQOR, title: type, data_key: column_2}
-      - {id: OJLQEN, title: created, data_key: column_3}
-      role: tonal-data-grid
-    type: DataGrid
-    components:
-    - name: repeating_panel
-      properties: {item_template: UK.RowTemplate1, role: outlined-card}
-      type: RepeatingPanel
-      layout_properties: {}
-    layout_properties: {grid_position: 'WJUVUP,PHRLYW'}
+  - name: outlined_card_2
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'MUJYPG,RGLZVW'}
+    components: []
 - type: FlowPanel
   properties: {}
   name: navbar_links

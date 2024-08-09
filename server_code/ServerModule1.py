@@ -13,4 +13,6 @@ def add_suggestion(text, type):
 
 
 @anvil.server.callable
-
+def get_suggestions_data():
+  suggestions_data = app_tables.suggestions_uk.search()
+  return [dict(row) for row in suggestions_data]
