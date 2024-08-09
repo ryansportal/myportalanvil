@@ -12,6 +12,6 @@ def add_suggestion(text, type):
   app_tables.suggestions_uk.add_row(text=text, type=type, created=datetime.now())
 
 @anvil.server.callable
-def get_suggestions_uk():
-    # Fetch all rows from the 'suggestions_UK' table
-    return app_tables.suggestions_UK.search()
+def get_suggestions_data():
+  suggestions_data = app_tables.suggestions_uk.search()
+  return [dict(row) for row in suggestions_data]
