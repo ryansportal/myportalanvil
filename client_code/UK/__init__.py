@@ -7,18 +7,15 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
+
 class UK(UKTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
 
 
-     # Load the data into the RepeatingPanel
-    self.load_suggestions_data()
-    
-  def load_suggestions_data(self):
-    suggestions_data = anvil.server.call('get_suggestions_data')  # Call the server function
-    self.repeating_panel.items = suggestions_data  # Assuming you have a RepeatingPanel to display the data
-   
+        # Call the server function and display the data
+    data = anvil.server.call('get_data')
+    self.data_grid_1.items = data
    
   
 #Nav
@@ -39,5 +36,4 @@ class UK(UKTemplate):
   def link_4_click(self, **event_args):
       open_form('US_CA')
 
-  def data_grid_UK_show(self, **event_args):
-   self.repeating_panel = self.load_suggestions_data()
+
