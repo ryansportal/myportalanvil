@@ -10,10 +10,10 @@ import requests
 
 @anvil.server.callable
 def add_suggestion(text, type):
-  app_tables.suggestions_uk.add_row(text=text, type=type, created=datetime.now())
+  app_tables.uk.add_row(text=text, type=type, created=datetime.now())
 
 
 @anvil.server.callable
 def get_data():
     # Retrieve data from 'MyTable'
-    return app_tables.suggestions_uk.search()
+    return app_tables.uk.search()
