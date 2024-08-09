@@ -15,7 +15,7 @@ class UK(UKTemplate):
 
   def load_data(self):
         # Fetch data from the server
-    suggestions = anvil.server.call('get_suggestions_UK')
+    suggestions = anvil.server.call('get_suggestions_uk')
         # Bind data to the Repeating Panel
     self.repeating_panel.items = suggestions
     
