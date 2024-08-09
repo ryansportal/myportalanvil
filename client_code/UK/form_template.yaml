@@ -1,0 +1,76 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'TKRWQM,SCIZXZ'}
+    components:
+    - name: link_1
+      properties: {role: headline, bold: true, align: center, spacing_above: large, background: '#db3529', col_spacing: huge, icon_align: left_edge, foreground: 'theme:On Primary', spacing_below: large, text: Global}
+      type: Link
+      layout_properties: {grid_position: 'JRHJXU,SLQCBP'}
+      event_bindings: {click: link_1_click}
+    - name: link_2
+      properties: {text: UK, align: center, background: '#db3529', foreground: 'theme:On Primary', bold: true, role: headline, spacing_below: large, spacing_above: large}
+      type: Link
+      layout_properties: {grid_position: 'JRHJXU,ZAIRAV'}
+      event_bindings: {click: link_2_click}
+    - name: link_3
+      properties: {text: South Africa, align: center, background: '#db3529', foreground: 'theme:On Primary', bold: true, role: headline, spacing_below: large, spacing_above: large}
+      type: Link
+      layout_properties: {grid_position: 'JRHJXU,DBQYAA'}
+      event_bindings: {click: link_3_click}
+    - name: link_4
+      properties: {role: headline, bold: true, align: center, spacing_above: large, background: '#db3529', wrap_on: mobile, foreground: 'theme:On Primary', spacing_below: large, text: 'US&CA  '}
+      type: Link
+      layout_properties: {grid_position: 'JRHJXU,CTINWH'}
+      event_bindings: {click: link_4_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- name: rich_text_1
+  properties: {content: UK}
+  type: RichText
+  layout_properties: {slot: title}
+- name: grid_panel_1
+  properties: {spacing_above: medium, spacing_below: large, visible: true}
+  type: GridPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: column_panel_2
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {row: BLGCTD, width_xs: 12, col_xs: 0}
+  - name: home_button
+    properties: {text: Home, align: right}
+    type: Link
+    layout_properties: {row: TBZIEJ, width_xs: 12, col_xs: 0}
+    event_bindings: {click: home_button_click}
+  - name: feedback_button
+    properties: {text: Feedback, align: right}
+    type: Link
+    layout_properties: {row: NRWVAU, width_xs: 12, col_xs: 0}
+    event_bindings: {click: feedback_button_click}
+  - name: roadmap_buttton
+    properties: {text: RoadMap, align: right}
+    type: Link
+    layout_properties: {row: OFZZHV, width_xs: 12, col_xs: 0}
+    event_bindings: {click: roadmap_buttton_click}
+  - name: payprop_requests_button
+    properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: right}
+    type: Link
+    layout_properties: {row: FMOMJR, width_xs: 12, col_xs: 0}
+    event_bindings: {click: payprop_requests_button_click}
+  - name: image_1
+    properties: {spacing_below: large, spacing_above: large, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: center, background: '', height: '150'}
+    type: Image
+    layout_properties: {row: UDTNNS, width_xs: 9, col_xs: 2}
