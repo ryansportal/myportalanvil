@@ -55,10 +55,19 @@ db_schema:
     - name: created
       admin_ui: {width: 200, order: 2}
       type: datetime
-    - name: Territory
+    - name: territory
       admin_ui: {width: 200, order: 3}
-      type: string
+      type: link_single
+      target: territory
     title: suggestions_uk
+  territory:
+    client: full
+    server: full
+    columns:
+    - name: territory
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: territory
 startup: {type: form, module: Home}
 native_deps: null
 uplink_visible: true

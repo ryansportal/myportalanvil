@@ -14,14 +14,19 @@ class Feedback(FeedbackTemplate):
 
     # Any code you write here will run before the form opens.
     self.category_dd.items = [(r["name"], r) for r in app_tables.categories.search()]
+    self.dd_territory.items = [(r["territory"], r) for r in app_tables.territory.search()]
 
   def category_dd_change(self, **event_args):
     """This method is called when an item is selected"""
-
+  def dd_territory_change(self, **event_args):
+    """This method is called when an item is selected"""
+    
   def validate_fields(self):
     suggestion = self.suggestion_box.text
     drop_down = self.category_dd.selected_value
-    if not suggestion or not drop_down:
+    drop_down_territory = self.dd_territory.selected_value
+    
+    if not suggestion or not drop_down or not drop_down_territory:
       alert("Please complete all fields", title="Validation Error")
       return False
     return True
@@ -29,11 +34,12 @@ class Feedback(FeedbackTemplate):
   def clear_inputs(self):
     self.suggestion_box.text = ""
     self.category_dd.selected_value = None
+    self.dd_territory.selected_value = None
 
   def submit_button_click(self, **event_args):
     if self.validate_fields():
       anvil.server.call(
-        "add_suggestion", self.suggestion_box.text, self.category_dd.selected_value
+        "add_suggestion", self.suggestion_box.text, self.category_dd.selected_value, self.dd_territory.selected_value
       )
       alert("Form submitted")
       self.clear_inputs()

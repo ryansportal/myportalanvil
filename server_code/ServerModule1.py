@@ -9,7 +9,6 @@ import requests
 
 
 @anvil.server.callable
-def add_suggestion(feature, category):
-  app_tables.suggestions_uk.add_row(feature=feature, category=category, created=datetime.now())
-
+def add_suggestion(feature, category, territory):
+  app_tables.suggestions_uk.add_row(feature=feature, category=category, created=datetime.now(), territory=territory)
 
