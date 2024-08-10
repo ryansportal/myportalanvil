@@ -55,6 +55,9 @@ db_schema:
     - name: created
       admin_ui: {width: 200, order: 2}
       type: datetime
+    - name: Territory
+      admin_ui: {width: 200, order: 3}
+      type: string
     title: suggestions_uk
 startup: {type: form, module: Home}
 native_deps: null

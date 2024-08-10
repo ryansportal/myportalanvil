@@ -19,10 +19,21 @@ components:
       properties: {text: Suggestion, align: center, bold: false, role: headline, foreground: 'theme:On Primary'}
       type: Label
       layout_properties: {grid_position: 'BRPISL,VRYOYT'}
+    - name: choose_category_copy
+      properties: {text: 'Choose category:', foreground: 'theme:On Primary', icon_align: right, spacing_above: large}
+      type: Label
+      layout_properties: {grid_position: 'VZGIXJ,JGABXC UFIRPZ,QMZLFG'}
     - name: choose_category
       properties: {text: 'Choose category:', foreground: 'theme:On Primary', icon_align: right, spacing_above: large}
       type: Label
-      layout_properties: {grid_position: 'VZGIXJ,JGABXC'}
+      layout_properties: {grid_position: 'VZGIXJ,JGABXC VXSJPD,RLZSGI'}
+    - name: dd_territory
+      properties:
+        items: [Global, UK, South Africa, US & CA]
+        include_placeholder: true
+        placeholder: Please Select
+      type: DropDown
+      layout_properties: {grid_position: 'VZGIXJ,QBUZIB QORFPA,GQCBWU'}
     - name: category_dd
       properties: {placeholder: Please Select, include_placeholder: true, background: '#24364f', foreground: 'theme:On Primary', spacing_above: large}
       type: DropDown
