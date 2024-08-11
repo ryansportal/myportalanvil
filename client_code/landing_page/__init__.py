@@ -34,4 +34,4 @@ class landing_page(landing_pageTemplate):
   # Redirect to another form if the user is logged in
     if user is not None:
       open_form('Home')  # Replace 'new_form_name' with the actual form you want to open
-  
+      

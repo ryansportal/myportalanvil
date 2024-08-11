@@ -39,7 +39,7 @@ class Home(HomeTemplate):
 
  
   # Log Out
-  def button_logout_click(self, **event_args):
-    anvil.users.logout()
-    open_form('landing_page')  # Redirect to landing_page after logging out
+ # def button_logout_click(self, **event_args):
+ #   anvil.users.logout()
+  #  open_form('landing_page')  # Redirect to landing_page after logging out
    
