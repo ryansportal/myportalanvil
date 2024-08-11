@@ -38,6 +38,7 @@ class Home(HomeTemplate):
 
   def button_logout_click(self, **event_args):
     anvil.users.logout()
+    open_form('login')
 
 
  
