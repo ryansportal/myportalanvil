@@ -47,7 +47,7 @@ components:
     properties:
       columns:
       - {id: SWLKBK, data_key: feature, title: feature}
-      - {id: HICYQZ, data_key: category, title: category}
+      - {id: HICYQZ, data_key: categories, title: category, expand: true}
       - {id: WYFSTS, data_key: created, title: created}
       - {id: WXZVKD, data_key: territory, title: territory}
     type: DataGrid
