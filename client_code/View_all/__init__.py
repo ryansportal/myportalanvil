@@ -1,4 +1,4 @@
-from ._anvil_designer import US_CATemplate
+from ._anvil_designer import View_allTemplate
 from anvil import *
 import anvil.server
 import anvil.users
@@ -7,10 +7,13 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class US_CA(US_CATemplate):
+class View_all(View_allTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+    # Any code you write here will run before the form opens.
+
 
 
   def home_button_click(self, **event_args):
@@ -34,6 +37,5 @@ class US_CA(US_CATemplate):
       open_form('South_Africa')
   def link_4_click(self, **event_args):
       open_form('US_CA')
-
   def link_5_click(self, **event_args):
-   open_form('View_all')
+      open_form("View_all")

@@ -101,6 +101,8 @@ class PayProp_Requests(PayProp_RequestsTemplate):
       open_form('South_Africa')
     def link_4_click(self, **event_args):
       open_form('US_CA')
+    def link_5_click(self, **event_args):
+      open_form("View_all")
 
 
 

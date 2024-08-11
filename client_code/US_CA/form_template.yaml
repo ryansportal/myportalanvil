@@ -13,6 +13,11 @@ components:
     type: ColumnPanel
     layout_properties: {grid_position: 'MCIUEA,KHSHFA'}
     components:
+    - name: link_5
+      properties: {role: title, bold: true, align: center, spacing_above: large, background: '#cc382d', icon: '', font: '', col_spacing: huge, icon_align: left, foreground: 'theme:On Primary', spacing_below: none, font_size: null, text: All Requests}
+      type: Link
+      layout_properties: {grid_position: 'JRHJXU,RZTURP'}
+      event_bindings: {click: link_5_click}
     - name: link_1
       properties: {role: title, bold: true, align: center, spacing_above: large, background: '#db3529', col_spacing: huge, icon_align: left_edge, foreground: 'theme:On Primary', spacing_below: large, text: Global}
       type: Link
@@ -24,12 +29,12 @@ components:
       layout_properties: {grid_position: 'JRHJXU,ZAIRAV'}
       event_bindings: {click: link_2_click}
     - name: link_3
-      properties: {text: South Africa, align: center, background: '#db3529', foreground: 'theme:On Primary', bold: true, role: title, spacing_below: large, spacing_above: large}
+      properties: {text: S.A, align: center, background: '#db3529', foreground: 'theme:On Primary', bold: true, role: title, spacing_below: large, spacing_above: large}
       type: Link
       layout_properties: {grid_position: 'JRHJXU,DBQYAA'}
       event_bindings: {click: link_3_click}
     - name: link_4
-      properties: {role: headline, bold: true, align: center, spacing_above: large, background: '#db3529', wrap_on: mobile, foreground: 'theme:On Primary', spacing_below: large, text: 'US&CA  '}
+      properties: {role: headline, bold: true, align: center, spacing_above: large, background: '#db3529', icon: 'fa:arrow-circle-right', wrap_on: mobile, foreground: 'theme:On Primary', spacing_below: large, text: 'US & CA  '}
       type: Link
       layout_properties: {grid_position: 'JRHJXU,CTINWH'}
       event_bindings: {click: link_4_click}
