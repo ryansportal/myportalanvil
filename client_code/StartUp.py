@@ -18,8 +18,6 @@ def startup():
   except anvil.users.AuthenticationFailed as e:
     print(e)
     open_form('login')
-
-    
   
 if __name__ == "__main__":
   startup()

@@ -36,4 +36,8 @@ class Home(HomeTemplate):
   def payprop_requests_button_click(self, **event_args):
     open_form('PayProp_Requests')
 
+  def button_logout_click(self, **event_args):
+    anvil.users.logout()
+
+
  
