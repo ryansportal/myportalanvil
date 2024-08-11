@@ -37,9 +37,8 @@ class Home(HomeTemplate):
     open_form('PayProp_Requests')
 
 
-
-    
-   # Log Out
+ 
+  # Log Out
   def button_logout_click(self, **event_args):
     anvil.users.logout()
     open_form('landing_page')  # Redirect to landing_page after logging out

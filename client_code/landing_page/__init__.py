@@ -28,7 +28,7 @@ class landing_page(landing_pageTemplate):
     
 
   def user_state(self, user):
-    self.button_login.visible = user is None
+    self.button_login.visible = True
   
 
   # Redirect to another form if the user is logged in
