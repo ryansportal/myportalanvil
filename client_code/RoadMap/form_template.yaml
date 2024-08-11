@@ -12,6 +12,11 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - name: button_logout
+    properties: {text: Log Out, role: outlined-button, foreground: 'theme:On Background'}
+    type: Button
+    event_bindings: {click: button_logout_click}
 - name: column_panel_2
   properties: {}
   type: ColumnPanel

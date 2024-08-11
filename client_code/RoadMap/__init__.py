@@ -28,3 +28,7 @@ class RoadMap(RoadMapTemplate):
     open_form('PayProp_Requests')
   def link_5_click(self, **event_args):
     open_form("View_all")
+
+  def button_logout_click(self, **event_args):
+    anvil.users.logout()
+    open_form('login')

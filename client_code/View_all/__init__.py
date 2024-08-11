@@ -45,3 +45,7 @@ class View_all(View_allTemplate):
       open_form('US_CA')
   def link_5_click(self, **event_args):
       open_form("View_all")
+
+  def button_logout_click(self, **event_args):
+    anvil.users.logout()
+    open_form('login')

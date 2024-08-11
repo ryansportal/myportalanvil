@@ -45,17 +45,12 @@ class Global(GlobalTemplate):
 #Nav  
   def home_button_click(self, **event_args):
     open_form('Home')
-
   def feedback_button_click(self, **event_args):
     open_form('Feedback')
-
   def roadmap_buttton_click(self, **event_args):
    open_form('RoadMap')
-
   def payprop_requests_button_click(self, **event_args):
     open_form('PayProp_Requests')
-    # Any code you write here will run before the form opens.
-
   def link_1_click(self, **event_args):
       open_form('Global')
   def link_2_click(self, **event_args):
@@ -66,3 +61,7 @@ class Global(GlobalTemplate):
       open_form('US_CA')
   def link_5_click(self, **event_args):
     open_form('View_all')
+
+  def button_logout_click(self, **event_args):
+    anvil.users.logout()
+    open_form('login')

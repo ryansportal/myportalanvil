@@ -60,6 +60,11 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - name: button_logout
+    properties: {text: Log Out, role: outlined-button, foreground: 'theme:On Background'}
+    type: Button
+    event_bindings: {click: button_logout_click}
 - name: grid_panel_1
   properties: {spacing_above: medium, spacing_below: large, visible: true}
   type: GridPanel
