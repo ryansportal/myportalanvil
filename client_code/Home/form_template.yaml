@@ -3,16 +3,6 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html', background: '#243a51', foreground: ''}
 components:
-- name: outlined_card_1
-  properties: {role: outlined-card}
-  type: ColumnPanel
-  layout_properties: {slot: nav-right}
-  components:
-  - name: button_logout
-    properties: {text: Log Out, role: outlined-button}
-    type: Button
-    layout_properties: {grid_position: 'SCWTAB,NTMRTD'}
-    event_bindings: {click: button_logout_click}
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
@@ -58,4 +48,9 @@ components:
   properties: {text: 'A Place and a space to view, submit and track feature requests', foreground: 'theme:On Primary', align: center, bold: false}
   type: Label
   layout_properties: {slot: default}
+- name: button_logout
+  properties: {text: Log Out, role: outlined-button, foreground: 'theme:On Background'}
+  type: Button
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: button_logout_click}
 custom_component: false

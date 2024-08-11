@@ -43,14 +43,4 @@ class Home(HomeTemplate):
   def button_logout_click(self, **event_args):
     anvil.users.logout()
     open_form('landing_page')  # Redirect to landing_page after logging out
-    
- # def user_state(self, user):
-  #  self.button_login.visible = user is None
-   # self.button_logout.visible = user is not None
-  
-    # Redirect to another form if the user is logged in
-    if user is not None:
-      open_form('Home')  # Replace 'Home' with the actual form you want to open
-
-    
-
+   

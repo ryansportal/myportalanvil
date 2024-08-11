@@ -94,6 +94,11 @@ components:
   properties: {text: Feedback}
   type: Label
   layout_properties: {slot: title}
+- name: button_logout
+  properties: {text: Log Out, role: outlined-button, foreground: 'theme:On Background'}
+  type: Button
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: button_logout_click}
 container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
