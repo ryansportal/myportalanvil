@@ -38,6 +38,18 @@ components:
       type: Link
       layout_properties: {grid_position: 'JRHJXU,CTINWH'}
       event_bindings: {click: link_4_click}
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: MNMTFA, data_key: feature, title: feature}
+      - {id: EPLSLW, data_key: category, title: category}
+      - {id: ZBIVBV, data_key: created, title: created}
+    type: DataGrid
+    components:
+    - name: repeating_panel_1
+      properties: {item_template: US_CA.RowTemplate5}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'UGDCRN,NQXLDU'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

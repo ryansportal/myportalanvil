@@ -43,6 +43,19 @@ components:
         type: Link
         layout_properties: {grid_position: 'JRHJXU,CTINWH'}
         event_bindings: {click: link_4_click}
+  - name: data_grid_1
+    properties:
+      columns:
+      - {id: SWLKBK, data_key: feature, title: feature}
+      - {id: HICYQZ, data_key: category, title: category}
+      - {id: WYFSTS, data_key: created, title: created}
+      - {id: WXZVKD, data_key: territory, title: territory}
+    type: DataGrid
+    components:
+    - name: repeating_panel_1
+      properties: {item_template: View_all.RowTemplate4}
+      type: RepeatingPanel
+    layout_properties: {grid_position: 'DDPWZP,VWUQAD'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
