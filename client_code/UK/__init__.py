@@ -11,9 +11,7 @@ from anvil.tables import app_tables
 class UK(UKTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-
-    # Any code you write here will run before the form opens.
-   # self.repeating_panel_1.items = app_tables.suggestions_uk.search()
+  
 
   # Define the territories to be excluded
     excluded_territories = ["Global", "South Africa", "US & CA"]  # List of territory names to exclude
