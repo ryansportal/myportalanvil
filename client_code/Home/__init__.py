@@ -16,6 +16,10 @@ class Home(HomeTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     anvil.users.login_with_form()
+    print(f"This user has logged in: {anvil.users.get_user()['email']}")
+
+
+
 
   
    #Link Nav Bar
