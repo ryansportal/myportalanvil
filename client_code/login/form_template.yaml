@@ -4,15 +4,24 @@ container:
   properties: {html: '@theme:standard-page.html'}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {background: '#f7f9fc'}
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: button_login
-    properties: {text: Sign Up / Log In, role: outlined-button}
-    type: Button
-    layout_properties: {grid_position: 'BNLOWE,MNZLVU'}
-    event_bindings: {click: button_login_click}
+  - name: outlined_card_1
+    properties: {role: elevated-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'FEJOXJ,WIIUXL'}
+    components:
+    - name: button_login
+      properties: {text: Sign Up / Log In, role: tonal-button, icon: '', italic: false, underline: false, background: '#0094d2', foreground: '#ffffff'}
+      type: Button
+      layout_properties: {grid_position: 'DEEGNI,CPMFOW'}
+      event_bindings: {click: button_login_click}
+    - name: image_1
+      properties: {spacing_below: large, spacing_above: none, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: center, background: '#ffffff', height: '150'}
+      type: Image
+      layout_properties: {grid_position: 'NCBECM,DSREKG'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
@@ -22,7 +31,3 @@ components:
   properties: {text: MyPortal}
   type: Label
   layout_properties: {slot: title}
-- name: image_1
-  properties: {spacing_below: large, spacing_above: large, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: center, background: '', height: '150'}
-  type: Image
-  layout_properties: {slot: default}
