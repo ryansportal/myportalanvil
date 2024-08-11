@@ -63,7 +63,9 @@ class Feedback(FeedbackTemplate):
     open_form('PayProp_Requests')
 
    # Log Out
-    def button_logout_click(self, **event_args):
-      anvil.users.logout()
-      open_form('login')
+
+  def button_logout_click(self, **event_args):
+    anvil.users.logout()
+    open_form('login')
+ 
   
