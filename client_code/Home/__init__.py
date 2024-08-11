@@ -38,7 +38,7 @@ class Home(HomeTemplate):
 
   user = anvil.users
   if user is not None:
-    open_form('Home')
+    get_open_form('Home')
  
   # Log Out
   def button_logout_click(self, **event_args):
