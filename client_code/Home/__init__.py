@@ -36,7 +36,7 @@ class Home(HomeTemplate):
   def payprop_requests_button_click(self, **event_args):
     open_form('PayProp_Requests')
 
-
+   
  
   # Log Out
   def button_logout_click(self, **event_args):
@@ -44,6 +44,8 @@ class Home(HomeTemplate):
     open_form('landing_page')  # Redirect to landing_page after logging out
 
    # Redirect to another form if the user is logged in
+    user = anvil.users.get_user()
+    self.user_state(user)
     if user is not None:
       open_form('Home')  # Replace 'new_form_name' with the actual form you want to open
       
