@@ -1,3 +1,9 @@
 is_package: true
 container: {type: DataRowPanel}
-components: []
+components:
+- name: label_1
+  properties: {text: ''}
+  type: Label
+  layout_properties: {column: AMJNEG}
+  data_bindings:
+  - {property: tag, code: '[self.item[''category''][''name'']', writeback: false}
