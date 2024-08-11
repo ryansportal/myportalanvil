@@ -46,10 +46,10 @@ components:
   - name: data_grid_1
     properties:
       columns:
-      - {id: SWLKBK, data_key: feature, title: feature}
-      - {id: HICYQZ, data_key: category, title: category, expand: true}
-      - {id: WYFSTS, data_key: created, title: created}
-      - {id: WXZVKD, data_key: territory, title: territory}
+      - {id: SWLKBK, data_key: feature, title: Feature, expand: true}
+      - {id: HICYQZ, data_key: category, title: Category, expand: true}
+      - {id: WYFSTS, data_key: created, title: Created, expand: true}
+      - {id: WXZVKD, data_key: territory, title: Territory, expand: true}
     type: DataGrid
     components:
     - name: repeating_panel_1

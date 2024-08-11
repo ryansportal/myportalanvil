@@ -1,3 +1,21 @@
 is_package: true
 container: {type: DataRowPanel}
-components: []
+components:
+- name: label_category
+  properties: {}
+  type: Label
+  layout_properties: {column: PCFXJV}
+  data_bindings:
+  - {property: tag, code: self.label_category, writeback: false}
+- name: label_created
+  properties: {}
+  type: Label
+  layout_properties: {column: ILUXDV}
+  data_bindings:
+  - {property: tag, code: self.label_created, writeback: false}
+- name: label_feature
+  properties: {}
+  type: Label
+  layout_properties: {column: TWLMPU}
+  data_bindings:
+  - {property: tag, code: self.label_feature, writeback: false}

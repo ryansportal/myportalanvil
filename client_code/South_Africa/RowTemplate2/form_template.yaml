@@ -1,3 +1,21 @@
 is_package: true
 container: {type: DataRowPanel}
-components: []
+components:
+- name: label_feature
+  properties: {}
+  type: Label
+  layout_properties: {column: WYXARR}
+  data_bindings:
+  - {property: tag, code: self.label_feature, writeback: false}
+- name: label_category
+  properties: {}
+  type: Label
+  layout_properties: {column: ZOMMXG}
+  data_bindings:
+  - {property: tag, code: self.label_category, writeback: false}
+- name: label_created
+  properties: {}
+  type: Label
+  layout_properties: {column: XXKTLZ}
+  data_bindings:
+  - {property: tag, code: self.label_created, writeback: false}

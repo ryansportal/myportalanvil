@@ -1,9 +1,24 @@
 is_package: true
-container: {type: DataRowPanel}
+container:
+  type: DataRowPanel
+  data_bindings:
+  - {property: tag, code: '', writeback: false}
 components:
-- name: label_1
-  properties: {text: ''}
+- name: label_feature
+  properties: {}
+  type: Label
+  layout_properties: {column: LVXQZU}
+  data_bindings:
+  - {property: tag, code: self.label_feature, writeback: false}
+- name: label_category
+  properties: {}
   type: Label
   layout_properties: {column: AMJNEG}
   data_bindings:
-  - {property: tag, code: '[self.item[''category''][''name'']', writeback: false}
+  - {property: tag, code: self.label_category, writeback: false}
+- name: label_created
+  properties: {}
+  type: Label
+  layout_properties: {column: SKJTQK}
+  data_bindings:
+  - {property: tag, code: self.label_created, writeback: false}

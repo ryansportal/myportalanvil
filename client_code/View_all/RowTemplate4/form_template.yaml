@@ -1,3 +1,29 @@
 is_package: true
-container: {type: DataRowPanel}
-components: []
+container:
+  type: DataRowPanel
+  properties: {auto_display_data: true}
+components:
+- name: label_feature
+  properties: {}
+  type: Label
+  layout_properties: {column: SWLKBK}
+  data_bindings:
+  - {property: tag, code: self.label_feature, writeback: false}
+- name: label_category
+  properties: {}
+  type: Label
+  layout_properties: {column: HICYQZ}
+  data_bindings:
+  - {property: tag, code: self.label_category, writeback: false}
+- name: label_created
+  properties: {}
+  type: Label
+  layout_properties: {column: WYFSTS}
+  data_bindings:
+  - {property: tag, code: self.label_created, writeback: false}
+- name: label_territory
+  properties: {}
+  type: Label
+  layout_properties: {column: WXZVKD}
+  data_bindings:
+  - {property: tag, code: self.label_territory, writeback: false}

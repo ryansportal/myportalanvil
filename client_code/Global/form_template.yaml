@@ -44,7 +44,6 @@ components:
       - {id: TWLMPU, data_key: feature, title: feature}
       - {id: PCFXJV, data_key: category, title: category}
       - {id: ILUXDV, data_key: created, title: created}
-      - {id: BWEANR, data_key: territory, title: territory}
     type: DataGrid
     components:
     - name: repeating_panel_1
