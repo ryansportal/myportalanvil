@@ -45,17 +45,17 @@ components:
     layout_properties: {row: TBZIEJ, width_xs: 12, col_xs: 0}
     event_bindings: {click: home_button_click}
   - name: feedback_button
-    properties: {text: Feedback, align: right}
+    properties: {text: Feedback, align: center}
     type: Link
     layout_properties: {row: NRWVAU, width_xs: 12, col_xs: 0}
     event_bindings: {click: feedback_button_click}
   - name: roadmap_buttton
-    properties: {text: RoadMap, align: right}
+    properties: {text: RoadMap, align: center}
     type: Link
     layout_properties: {row: OFZZHV, width_xs: 12, col_xs: 0}
     event_bindings: {click: roadmap_buttton_click}
   - name: payprop_requests_button
-    properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: right}
+    properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: center}
     type: Link
     layout_properties: {row: FMOMJR, width_xs: 12, col_xs: 0}
     event_bindings: {click: payprop_requests_button_click}

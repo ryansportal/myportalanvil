@@ -78,17 +78,17 @@ components:
     type: ColumnPanel
     layout_properties: {row: BLGCTD, width_xs: 12, col_xs: 0}
   - name: home_button
-    properties: {text: Home, align: right}
+    properties: {text: Home, align: center}
     type: Link
     layout_properties: {row: TBZIEJ, width_xs: 12, col_xs: 0}
     event_bindings: {click: home_button_click}
   - name: feedback_button
-    properties: {text: Feedback, align: right}
+    properties: {text: Feedback, align: center}
     type: Link
     layout_properties: {row: NRWVAU, width_xs: 12, col_xs: 0}
     event_bindings: {click: feedback_button_click}
   - name: roadmap_buttton
-    properties: {text: RoadMap, align: right}
+    properties: {text: RoadMap, align: center}
     type: Link
     layout_properties: {row: OFZZHV, width_xs: 12, col_xs: 0}
     event_bindings: {click: roadmap_buttton_click}
