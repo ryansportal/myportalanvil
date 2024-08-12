@@ -14,7 +14,7 @@ class Feedback(FeedbackTemplate):
 
     # Any code you write here will run before the form opens.
     self.category_dd.items = [(r["name"], r) for r in app_tables.categories.search()]
-    self.dd_territory.items = [(r["territory"], r) for r in app_tables.territory.search()]
+    self.dd_territory.items = [(r["Territory"], r) for r in app_tables.territory.search()]
 
   def category_dd_change(self, **event_args):
     """This method is called when an item is selected"""

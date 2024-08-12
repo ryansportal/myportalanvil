@@ -47,27 +47,39 @@ class View_all(View_allTemplate):
     anvil.users.logout()
     open_form('login')
 
-
-  def sort_change(self, **event_args):
-    # Get the selected field to sort by
-    self.selected_field = self.sort.selected_value
-    # Determine the sort order
-    self.sort_order = self.order.selected_value  # Assuming you have a dropdown or toggle named 'sort_order'
-     
+#Sort and Order
     
-  def apply_sorting(self):
+# Initialize dropdowns
+    self.drop_down_sort.items = [("Category", "Category"), ("Created", "Created"), ("Territory", "Territory")]
+    self.drop_down_order.items = [("Ascending", "Ascending"), ("Descending", "Descending")]
+
+        # Bind the update button click event to the method
+    self.update_button.set_event_handler('click', self.update_sorting_order)
+
+        # Load initial data
+    self.apply_sorting()
+
+  def submit_button_click(self, **event_args):
+        # Apply sorting based on the current dropdown values
         self.apply_sorting()
  
 
-    
-  def outlined_button_1_click(self, **event_args):
-   #  Sort the items in the DataGrid
-    if self.selected_field:
-        if self.sort_order == "Ascending":
-            sorted_data = app_tables.suggestions_uk.search(tables.order_by(self.selected_field))
-        else:
-            sorted_data = app_tables.suggestions_uk.search(tables.order_by(self.selected_field, ascending=False))
+  def apply_sorting(self):
+        # Get selected values from dropdowns
+        sort_field = self.drop_down_sort.selected_value
+        sort_order = self.drop_down_order.selected_value
 
-        
+        # Ensure we have valid selections
+        if not sort_field or not sort_order:
+            return
+
+        # Determine the sort order (ascending or descending)
+        ascending = sort_order == "Ascending"
+
+        # Fetch and sort data
+        sorted_data = app_tables.suggestions_uk.search(
+            tables.order_by(sort_field, ascending=ascending)
+        )
+
+        # Update the repeating panel with sorted data
         self.repeating_panel_1.items = sorted_data
-
