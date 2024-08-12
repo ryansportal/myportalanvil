@@ -49,7 +49,7 @@ components:
     layout_properties: {grid_position: 'BISQQR,POHCAM'}
     components:
     - name: label_2_copy
-      properties: {text: 'Sort By:'}
+      properties: {text: 'Sort By:', align: right}
       type: Label
       layout_properties: {grid_position: 'GEJHWC,STZMTT'}
     - name: sortby
@@ -60,15 +60,21 @@ components:
       layout_properties: {grid_position: 'GEJHWC,MDKSUB'}
       event_bindings: {change: sortby_change}
     - name: label_3
-      properties: {text: Ascending}
+      properties: {text: 'Order By:', align: right}
       type: Label
       layout_properties: {grid_position: 'GEJHWC,YUXNLM'}
-    - name: ascending
+    - name: order_by
       properties:
-        items: ['True', 'False']
+        items: [Ascending, Descending]
         include_placeholder: false
       type: DropDown
       layout_properties: {grid_position: 'GEJHWC,XSFMQP'}
+      event_bindings: {}
+    - name: outlined_button_1
+      properties: {text: Update, role: outlined-button, background: 'theme:Tertiary', foreground: 'theme:text', align: right}
+      type: Button
+      layout_properties: {grid_position: 'GEJHWC,IRXQOS'}
+      event_bindings: {click: outlined_button_1_click}
   - name: data_grid_1
     properties:
       columns:

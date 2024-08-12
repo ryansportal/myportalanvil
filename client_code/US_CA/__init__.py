@@ -16,7 +16,7 @@ class US_CA(US_CATemplate):
     excluded_territories = ["Global", "South Africa", "UK"]  # List of territory names to exclude
         
         # Retrieve the rows to be excluded from the 'territory' table
-    excluded_territory_rows = [app_tables.territory.get(territory=name) for name in excluded_territories]
+    excluded_territory_rows = [app_tables.territory.get(Territory=name) for name in excluded_territories]
 
         # Filter out None in case some territories are not found
     excluded_territory_rows = [row for row in excluded_territory_rows if row is not None]
@@ -24,7 +24,7 @@ class US_CA(US_CATemplate):
         # Build the query to exclude items linked to the specified territories
     if excluded_territory_rows:
             # Create a list of query conditions to exclude
-            exclusion_conditions = [q.all_of(territory=row) for row in excluded_territory_rows]
+            exclusion_conditions = [q.all_of(Territory=row) for row in excluded_territory_rows]
             # Use q.not_ to exclude items linked to any of these territories
             query_condition = q.not_(q.any_of(*exclusion_conditions))
     else:

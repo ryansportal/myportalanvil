@@ -24,7 +24,7 @@ class Global(GlobalTemplate):
         # Build the query to exclude items linked to the specified territories
     if excluded_territory_rows:
             # Create a list of query conditions to exclude
-            exclusion_conditions = [q.all_of(territory=row) for row in excluded_territory_rows]
+            exclusion_conditions = [q.all_of(Territory=row) for row in excluded_territory_rows]
             # Use q.not_ to exclude items linked to any of these territories
             query_condition = q.not_(q.any_of(*exclusion_conditions))
     else:
