@@ -304,32 +304,32 @@ color_scheme:
   colors:
   - {name: 'loading swirl, forgot password', color: '#cd372c'}
   - {name: text, color: '#fdfefe'}
-  - {name: On Primary, color: '#E1E3E3'}
-  - {name: On Primary Container, color: '#E1E3E3'}
-  - {name: Secondary, color: '#E1E3E3'}
-  - {name: Secondary Container, color: '#E1E3E3'}
-  - {name: On Secondary Container, color: '#E1E3E3'}
-  - {name: Tertiary, color: '#E1E3E3'}
-  - {name: Tertiary Container, color: '#E1E3E3'}
-  - {name: On Tertiary, color: '#E1E3E3'}
-  - {name: On Tertiary Container, color: '#E1E3E3'}
+  - {name: On Primary, color: ''}
+  - {name: On Primary Container, color: ''}
+  - {name: Secondary, color: ''}
+  - {name: Secondary Container, color: ''}
+  - {name: On Secondary Container, color: ''}
+  - {name: Tertiary, color: ''}
+  - {name: Tertiary Container, color: ''}
+  - {name: On Tertiary, color: ''}
+  - {name: On Tertiary Container, color: ''}
   - {name: Error, color: '#cd372c'}
   - {name: Background, color: '#212f3d'}
-  - {name: Surface - banner and cards, color: '#E1E3E3'}
-  - {name: On Background, color: '#E1E3E3'}
+  - {name: Surface - banner and cards, color: ''}
+  - {name: On Background, color: ''}
   - {name: On Surface, color: '#E1E3E3'}
   - {name: 'Surface Variant - loading back bround, table columns', color: '#0094d2'}
   - {name: On Surface Variant, color: '#E1E3E3'}
   - {name: Outline, color: '#E1E3E3'}
-  - {name: On Disabled, color: '#9b59b6'}
-  - {name: Disabled Container, color: '#9b59b6'}
-  - {name: Light Overlay 1, color: '#9b59b6'}
-  - {name: Light Overlay 2, color: '#9b59b6'}
-  - {name: 'Dark Overlay 1 - rgba(255, 219, 207, 0.08)', color: '#9b59b6'}
-  - {name: 'Dark Overlay 2 - ', color: '#9b59b6'}
-  - {name: Primary Overlay 1 - Hamburger, color: '#9b59b6'}
-  - {name: Table header background, color: '#9b59b6'}
-  - {name: Unused, color: '#9b59b6'}
+  - {name: On Disabled, color: ''}
+  - {name: Disabled Container, color: ''}
+  - {name: Light Overlay 1, color: '#0094d2'}
+  - {name: Light Overlay 2, color: '#0094d2'}
+  - {name: 'Dark Overlay 1 - rgba(255, 219, 207, 0.08)', color: ''}
+  - {name: 'Dark Overlay 2 - ', color: ''}
+  - {name: Primary Overlay 1 - Hamburger, color: ''}
+  - {name: Table header background, color: ''}
+  - {name: Unused, color: ''}
   - {name: Primary, color: '#E1E3E3'}
   - {name: Primary Container, color: '#0094d2'}
   - {name: On Primary, color: '#5B1A00'}
@@ -338,9 +338,9 @@ color_scheme:
   - {name: Secondary Container, color: '#5D4036'}
   - {name: On Secondary, color: '#cd372c'}
   - {name: Surface, color: '#212f3d'}
-  - {name: Surface Variant log in text box back ground, color: '#9b59b6'}
-  - {name: Button Overlay, color: '#9b59b6'}
-  - {name: 'Dark Overlay 2 - rgba(255, 219, 207, 0.12)', color: '#9b59b6'}
+  - {name: Surface Variant log in text box back ground, color: ''}
+  - {name: Button Overlay, color: ''}
+  - {name: 'Dark Overlay 2 - rgba(255, 219, 207, 0.12)', color: ''}
   - {name: Primary Overlay 1, color: '#212f3d'}
   - {name: Primary Overlay 2, color: '#212f3d'}
-  - {name: Primary Overlay 3, color: '#212f3d'}
+  - {name: 'Primary Overlay - log in pop up ', color: '#212f3d'}
