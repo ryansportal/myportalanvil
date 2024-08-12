@@ -14,11 +14,11 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: button_logout
-    properties: {text: Log Out, role: outlined-button, foreground: 'theme:On Primary', background: '#0094d2'}
+    properties: {text: Log Out, role: tonal-button, foreground: 'theme:text', background: '#0094d2'}
     type: Button
     event_bindings: {click: button_logout_click}
 - name: label_1
-  properties: {text: RoadMap}
+  properties: {text: RoadMap, foreground: 'theme:text'}
   type: Label
   layout_properties: {slot: title}
 - name: grid_panel_1

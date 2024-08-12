@@ -11,20 +11,20 @@ components:
   layout_properties: {slot: default}
   components:
   - name: outlined_card_1
-    properties: {role: elevated-card, border: '', col_widths: '{}', col_spacing: medium, spacing_below: none}
+    properties: {role: tonal-card, border: '', col_widths: '{}', col_spacing: medium, spacing_below: none, background: 'theme:text'}
     type: ColumnPanel
     layout_properties: {grid_position: 'KESTRK,MJFXVH'}
     components:
     - name: label_suggestion
-      properties: {text: Suggestion, align: center, bold: false, role: headline, foreground: 'theme:On Surface', spacing_below: medium, spacing_above: none}
+      properties: {text: Suggestion, align: center, bold: false, role: headline, foreground: '#006187', spacing_below: medium, spacing_above: none}
       type: Label
       layout_properties: {grid_position: 'WMGBBV,GRPNDQ'}
     - name: choose_category_copy
-      properties: {text: 'Choose Territory:', foreground: 'theme:On Background', icon_align: right, spacing_above: large, align: left}
+      properties: {text: 'Choose Territory:', foreground: '#006187', icon_align: right, spacing_above: large, align: left}
       type: Label
       layout_properties: {grid_position: 'MKGTTW,NKMJKB XDZJLX,HEADQL'}
     - name: choose_category
-      properties: {text: 'Choose category:', foreground: 'theme:On Background', icon_align: right, spacing_above: large, align: left}
+      properties: {text: 'Choose category:', foreground: '#006187', icon_align: right, spacing_above: large, align: left}
       type: Label
       layout_properties: {grid_position: 'MKGTTW,NKMJKB MFDLCX,CVEPMK'}
     - name: dd_territory
@@ -35,42 +35,37 @@ components:
         placeholder: Please Select
         spacing_above: large
         background: ''
-        foreground: theme:On Surface
+        foreground: '#006187'
         items: [Global, UK, South Africa, US & CA]
         border: ''
       type: DropDown
       layout_properties: {grid_position: 'MKGTTW,LGJUFH EMPKFE,MJJUMF'}
     - name: category_dd
-      properties: {placeholder: Please Select, include_placeholder: true, background: '', foreground: 'theme:On Surface', spacing_above: large, role: outlined, border: '', align: full}
+      properties: {placeholder: Please Select, include_placeholder: true, background: '', foreground: '#006187', spacing_above: large, role: outlined, border: '', align: full}
       type: DropDown
       layout_properties: {grid_position: 'MKGTTW,LGJUFH XHKODY,HIYGUQ'}
       event_bindings: {change: category_dd_change}
       data_bindings:
       - {property: tooltip, code: 'self.item[''type'']', writeback: false}
     - name: suggestion_box
-      properties: {auto_expand: true, role: outlined, background: '#fffbfe', foreground: 'theme:On Surface', placeholder: '', text: '', height: 371, border: ''}
+      properties: {auto_expand: true, role: outlined, background: 'theme:text', foreground: '#006187', placeholder: '', text: '', height: 371, border: ''}
       type: TextArea
       layout_properties: {grid_position: 'LATQJF,KPZXXE'}
       data_bindings:
       - {property: tooltip, code: 'self.item[''text'']', writeback: false}
     - name: file_loader
-      properties: {foreground: 'theme:On Primary', align: center, background: '#0094d2', spacing_above: large, spacing_below: large}
+      properties: {foreground: 'theme:text', align: center, background: '#0094d2', spacing_above: large, spacing_below: large, role: filled-button}
       type: FileLoader
       layout_properties: {grid_position: 'TQRFGE,EEBZOW'}
     - name: submit_button
-      properties: {text: Submit, icon: 'fa:arrow-circle-down', role: filled-button, foreground: 'theme:On Primary', background: '#0094d2'}
+      properties: {text: Submit, icon: 'fa:arrow-circle-down', role: filled-button, foreground: 'theme:text', background: '#0094d2'}
       type: Button
       layout_properties: {grid_position: 'OIOFIM,BIEZGS'}
       event_bindings: {click: submit_button_click}
 - name: label_2
-  properties: {text: Feedback}
+  properties: {text: Feedback, foreground: 'theme:text'}
   type: Label
   layout_properties: {slot: title}
-- name: button_logout
-  properties: {text: Log Out, role: outlined-button, foreground: 'theme:On Primary', background: '#0094d2'}
-  type: Button
-  layout_properties: {slot: nav-right}
-  event_bindings: {click: button_logout_click}
 - name: grid_panel_1
   properties: {spacing_above: medium, spacing_below: large, visible: true}
   type: GridPanel
@@ -104,6 +99,11 @@ components:
     properties: {spacing_below: large, spacing_above: large, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: center, background: '', height: '150'}
     type: Image
     layout_properties: {row: UDTNNS, width_xs: 9, col_xs: 2}
+- name: button_logout
+  properties: {text: Log Out, role: tonal-button, foreground: 'theme:text', background: '#0094d2'}
+  type: Button
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: button_logout_click}
 container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}

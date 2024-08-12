@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: outlined_card_1
-    properties: {role: elevated-card}
+    properties: {role: elevated-card, background: 'theme:text'}
     type: ColumnPanel
     layout_properties: {grid_position: 'FEJOXJ,WIIUXL'}
     components:
@@ -28,6 +28,6 @@ components:
   layout_properties: {slot: nav-right}
   components: []
 - name: label_1
-  properties: {text: MyPortal}
+  properties: {text: MyPortal, foreground: 'theme:text'}
   type: Label
   layout_properties: {slot: title}
