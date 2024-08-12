@@ -14,44 +14,43 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - name: button_logout
-    properties: {text: Log Out, role: outlined-button, foreground: 'theme:On Background'}
+    properties: {text: Log Out, role: outlined-button, foreground: 'theme:On Primary', background: '#0094d2'}
     type: Button
     event_bindings: {click: button_logout_click}
-- name: column_panel_2
-  properties: {}
-  type: ColumnPanel
-  layout_properties: {slot: left-nav}
-  components:
-  - name: column_panel_1
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'IKEYAU,PWZGXE'}
-    components:
-    - name: home_button
-      properties: {text: Home, align: right}
-      type: Link
-      layout_properties: {grid_position: 'GLYBOD,ZTJFXO'}
-      event_bindings: {click: home_button_click}
-    - name: feedback_button
-      properties: {text: Feedback, align: right}
-      type: Link
-      layout_properties: {grid_position: 'DLCDMB,QGEDGO'}
-      event_bindings: {click: feedback_button_click}
-    - name: roadmap_buttton
-      properties: {text: RoadMap, align: right}
-      type: Link
-      layout_properties: {grid_position: ''}
-      event_bindings: {click: roadmap_buttton_click}
-    - name: payprop_requests_button
-      properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: right}
-      type: Link
-      layout_properties: {grid_position: 'XXLZYC,FVUMKC'}
-      event_bindings: {click: payprop_requests_button_click}
-    - name: image_1
-      properties: {spacing_below: large, spacing_above: large, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: right, height: '150'}
-      type: Image
-      layout_properties: {grid_position: 'GAYAEJ,FCTTDD'}
 - name: label_1
   properties: {text: RoadMap}
   type: Label
   layout_properties: {slot: title}
+- name: grid_panel_1
+  properties: {spacing_above: medium, spacing_below: large, visible: true}
+  type: GridPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: column_panel_2
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {row: BLGCTD, width_xs: 12, col_xs: 0}
+  - name: home_button
+    properties: {text: Home, align: right}
+    type: Link
+    layout_properties: {row: TBZIEJ, width_xs: 12, col_xs: 0}
+    event_bindings: {click: home_button_click}
+  - name: feedback_button
+    properties: {text: Feedback, align: right}
+    type: Link
+    layout_properties: {row: NRWVAU, width_xs: 12, col_xs: 0}
+    event_bindings: {click: feedback_button_click}
+  - name: roadmap_buttton
+    properties: {text: RoadMap, align: right}
+    type: Link
+    layout_properties: {row: OFZZHV, width_xs: 12, col_xs: 0}
+    event_bindings: {click: roadmap_buttton_click}
+  - name: payprop_requests_button
+    properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: right}
+    type: Link
+    layout_properties: {row: FMOMJR, width_xs: 12, col_xs: 0}
+    event_bindings: {click: payprop_requests_button_click}
+  - name: image_1
+    properties: {spacing_below: large, spacing_above: large, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: center, background: '', height: '150'}
+    type: Image
+    layout_properties: {row: UDTNNS, width_xs: 9, col_xs: 2}

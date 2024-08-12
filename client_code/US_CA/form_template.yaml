@@ -41,22 +41,25 @@ components:
   - name: data_grid_1
     properties:
       columns:
-      - {id: MNMTFA, data_key: feature, title: feature}
-      - {id: EPLSLW, data_key: category, title: category}
-      - {id: ZBIVBV, data_key: created, title: created}
+      - {id: MNMTFA, data_key: feature, title: Feature}
+      - {id: EPLSLW, data_key: category, title: Category}
+      - {id: ZBIVBV, data_key: created, title: Created}
+      wrap_on: mobile
+      role: tonal-data-grid
+      rows_per_page: 50
     type: DataGrid
     components:
     - name: repeating_panel_1
       properties: {item_template: US_CA.RowTemplate5}
       type: RepeatingPanel
-    layout_properties: {grid_position: 'UGDCRN,NQXLDU'}
+    layout_properties: {grid_position: 'UGDCRN,NQXLDU', full_width_row: true}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
   components:
   - name: button_logout
-    properties: {text: Log Out, role: outlined-button, foreground: 'theme:On Background'}
+    properties: {text: Log Out, role: outlined-button, foreground: 'theme:On Primary', background: '#0094d2'}
     type: Button
     event_bindings: {click: button_logout_click}
 - name: label_1

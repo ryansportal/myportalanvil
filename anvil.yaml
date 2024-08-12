@@ -15,14 +15,8 @@ services:
   client_config: {}
   server_config: {}
 - source: /runtime/services/anvil/users.yml
-  client_config: {remember_me_days: 30, use_email: true, use_google: false, use_facebook: false, confirm_email: true, use_token: false, allow_remember_me: true, enable_automatically: true, allow_signup: true, require_secure_passwords: true}
+  client_config: {remember_me_days: 0.02083, use_email: true, use_google: false, use_facebook: false, confirm_email: true, use_token: false, allow_remember_me: true, enable_automatically: true, allow_signup: true, require_secure_passwords: true}
   server_config: {user_table: users}
-- source: /runtime/services/google.yml
-  client_config: {}
-  server_config: {}
-- source: /runtime/services/facebook.yml
-  client_config: {}
-  server_config: {}
 db_schema:
   categories:
     title: categories

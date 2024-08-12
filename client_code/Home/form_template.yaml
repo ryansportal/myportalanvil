@@ -1,45 +1,12 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html', background: '#f4f4f4', foreground: ''}
+  properties: {html: '@theme:standard-page.html', background: '', foreground: ''}
 components:
 - name: column_panel_1
   properties: {}
   type: ColumnPanel
   layout_properties: {slot: top-left-btn}
-- name: grid_panel_1
-  properties: {spacing_above: medium, spacing_below: large, visible: true, background: '#19242e'}
-  type: GridPanel
-  layout_properties: {slot: left-nav}
-  components:
-  - name: column_panel_2
-    properties: {}
-    type: ColumnPanel
-    layout_properties: {row: BLGCTD, width_xs: 12, col_xs: 0}
-  - name: home_button
-    properties: {text: Home, align: right, background: '#19242e', foreground: 'theme:On Primary'}
-    type: Link
-    layout_properties: {row: TBZIEJ, width_xs: 12, col_xs: 0}
-    event_bindings: {click: home_button_click}
-  - name: feedback_button
-    properties: {text: Feedback, align: right, background: '#19242e', foreground: 'theme:On Primary'}
-    type: Link
-    layout_properties: {row: NRWVAU, width_xs: 12, col_xs: 0}
-    event_bindings: {click: feedback_button_click}
-  - name: roadmap_buttton
-    properties: {text: RoadMap, align: right, background: '#19242e', foreground: 'theme:On Primary'}
-    type: Link
-    layout_properties: {row: OFZZHV, width_xs: 12, col_xs: 0}
-    event_bindings: {click: roadmap_buttton_click}
-  - name: payprop_requests_button
-    properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: right, background: '#19242e', foreground: 'theme:On Primary'}
-    type: Link
-    layout_properties: {row: FMOMJR, width_xs: 12, col_xs: 0}
-    event_bindings: {click: payprop_requests_button_click}
-  - name: image_1
-    properties: {spacing_below: large, spacing_above: large, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: center, background: '', height: '150'}
-    type: Image
-    layout_properties: {row: UDTNNS, width_xs: 8, col_xs: 2}
 - name: label_1
   properties: {text: Home}
   type: Label
@@ -50,7 +17,7 @@ components:
   layout_properties: {slot: nav-right}
   event_bindings: {click: button_logout_click}
 - name: column_panel_3
-  properties: {}
+  properties: {background: ''}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
@@ -63,4 +30,37 @@ components:
       properties: {text: 'A Place and a space to view, submit and track feature requests'}
       type: Label
       layout_properties: {grid_position: 'AWZQRP,DXSFAF'}
+- name: grid_panel_1
+  properties: {spacing_above: medium, spacing_below: large, visible: true}
+  type: GridPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: column_panel_2
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {row: BLGCTD, width_xs: 12, col_xs: 0}
+  - name: home_button
+    properties: {text: Home, align: right}
+    type: Link
+    layout_properties: {row: TBZIEJ, width_xs: 12, col_xs: 0}
+    event_bindings: {click: home_button_click}
+  - name: feedback_button
+    properties: {text: Feedback, align: right}
+    type: Link
+    layout_properties: {row: NRWVAU, width_xs: 12, col_xs: 0}
+    event_bindings: {click: feedback_button_click}
+  - name: roadmap_buttton
+    properties: {text: RoadMap, align: right}
+    type: Link
+    layout_properties: {row: OFZZHV, width_xs: 12, col_xs: 0}
+    event_bindings: {click: roadmap_buttton_click}
+  - name: payprop_requests_button
+    properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: right}
+    type: Link
+    layout_properties: {row: FMOMJR, width_xs: 12, col_xs: 0}
+    event_bindings: {click: payprop_requests_button_click}
+  - name: image_1
+    properties: {spacing_below: large, spacing_above: large, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: center, background: '', height: '150'}
+    type: Image
+    layout_properties: {row: UDTNNS, width_xs: 9, col_xs: 2}
 custom_component: false
