@@ -13,9 +13,9 @@ class RowTemplate4(RowTemplate4Template):
     self.init_components(**properties)
     # Inside RowTemplate1 form for each row in the Data Grid
     self.label_feature.text = self.item['feature']
-    self.label_category.text = self.item['category']['name']  # Access the 'name' field from the linked 'category'
-    self.label_created.text = str(self.item['created'])  # Convert created date to string, if necessary
-    self.label_territory.text = self.item['territory']['territory']  # Access the 'name' field from the linked 'category'
+    self.label_category.text = self.item['Category']['name']  # Access the 'name' field from the linked 'category'
+    self.label_created.text = str(self.item['Created'])  # Convert created date to string, if necessary
+    self.label_territory.text = self.item['Territory']['Territory']  # Access the 'name' field from the linked 'category'
 
 
     # Any code you write here will run before the form opens.

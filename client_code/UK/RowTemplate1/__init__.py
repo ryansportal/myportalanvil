@@ -12,7 +12,7 @@ class RowTemplate1(RowTemplate1Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.label_feature.text = self.item['feature']
-    self.label_category.text = self.item['category']['name']  # Access the 'name' field from the linked 'category'
-    self.label_created.text = str(self.item['created'])  # Convert created date to string, if necessary
+    self.label_category.text = self.item['Category']['name']  # Access the 'name' field from the linked 'category'
+    self.label_created.text = str(self.item['Created'])  # Convert created date to string, if necessary
 
    

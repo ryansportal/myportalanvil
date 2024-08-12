@@ -34,24 +34,27 @@ db_schema:
     - name: feature
       admin_ui: {width: 200}
       type: string
-    - name: category
-      admin_ui: {width: 200}
+    - name: Category
+      admin_ui: {order: 1, width: 200}
       type: link_single
       target: categories
     - name: created
       admin_ui: {width: 200}
       type: datetime
-    - name: territory
-      admin_ui: {width: 200}
+    - name: Territory
+      admin_ui: {order: 3, width: 200}
       type: link_single
       target: territory
+    - name: Created
+      admin_ui: {width: 200, order: 4}
+      type: date
   territory:
     title: territory
     client: full
     server: full
     columns:
-    - name: territory
-      admin_ui: {width: 200}
+    - name: Territory
+      admin_ui: {order: 0, width: 200}
       type: string
   users:
     title: users
@@ -91,7 +94,7 @@ db_schema:
     - name: details
       admin_ui: {order: 1.5, width: 200}
       type: bool
-startup: {type: module, module: StartUp}
+startup: {type: form, module: View_all}
 native_deps: null
 uplink_visible: true
 metadata: {title: MyPortal}

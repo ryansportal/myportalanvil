@@ -48,8 +48,12 @@ class View_all(View_allTemplate):
     open_form('login')
 
   def sortby_change(self, **event_args):
-    self.repeating_panel_1.items=app_tables.suggestions_uk.search()
-    tables.order_by(
-      self.sortby.selected_value,
-      ascending=eval(self.ascending.selected_value)
-    )
+    # Fetch data from the table
+   # Get the selected field to sort by
+    selected_field = self.sortby.selected_value
+    
+    # Sort the items in the DataGrid
+    if selected_field:
+      sorted_data = app_tables.suggestions_uk.search(tables.order_by(selected_field))
+      self.repeating_panel_1.items = sorted_data
+      
