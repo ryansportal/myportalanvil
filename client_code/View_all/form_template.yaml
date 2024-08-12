@@ -94,7 +94,7 @@ components:
     layout_properties: {row: OFZZHV, width_xs: 12, col_xs: 0}
     event_bindings: {click: roadmap_buttton_click}
   - name: payprop_requests_button
-    properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: center}
+    properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: right}
     type: Link
     layout_properties: {row: FMOMJR, width_xs: 12, col_xs: 0}
     event_bindings: {click: payprop_requests_button_click}
