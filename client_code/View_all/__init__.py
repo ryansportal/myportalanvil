@@ -46,3 +46,10 @@ class View_all(View_allTemplate):
   def button_logout_click(self, **event_args):
     anvil.users.logout()
     open_form('login')
+
+  def sortby_change(self, **event_args):
+    self.repeating_panel_1.items=app_tables.suggestions_uk.search()
+    tables.order_by(
+      self.sortby.selected_value,
+      ascending=eval(self.ascending.selected_value)
+    )
