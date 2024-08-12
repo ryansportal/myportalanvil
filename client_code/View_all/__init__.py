@@ -47,40 +47,27 @@ class View_all(View_allTemplate):
     anvil.users.logout()
     open_form('login')
 
-    self.sortby.change = self.sortby_change
-    self.order_by.change = self.sortby_change#
-  
-  def sortby_change(self, **event_args):
+
+  def sort_change(self, **event_args):
     # Get the selected field to sort by
-    self.selected_field = self.sortby.selected_value
+    self.selected_field = self.sort.selected_value
     # Determine the sort order
-    self.sort_order = self.order_by.selected_value  # Assuming you have a dropdown or toggle named 'sort_order'
+    self.sort_order = self.order.selected_value  # Assuming you have a dropdown or toggle named 'sort_order'
      
-# Call a method to apply the sorting
-    self.apply_sorting()   
     
   def apply_sorting(self):
         self.apply_sorting()
- #   if not self.selected_field:
- #       return  # No field selected, so do nothing
+ 
 
-  #  if self.sort_order == "Ascending":
-  #      sorted_data = app_tables.suggestions_uk.search(tables.order_by(self.selected_field))
-  #  elif self.sort_order == "Descending":
-  #      sorted_data = app_tables.suggestions_uk.search(tables.order_by(self.selected_field, ascending=False))
-
-  #  self.repeating_panel_1.items = sorted_data
     
   def outlined_button_1_click(self, **event_args):
    #  Sort the items in the DataGrid
     if self.selected_field:
         if self.sort_order == "Ascending":
             sorted_data = app_tables.suggestions_uk.search(tables.order_by(self.selected_field))
-        elif self.sort_order == "Descending":
+        else:
             sorted_data = app_tables.suggestions_uk.search(tables.order_by(self.selected_field, ascending=False))
 
         
         self.repeating_panel_1.items = sorted_data
 
-
- 
