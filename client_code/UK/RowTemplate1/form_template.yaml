@@ -5,19 +5,19 @@ container:
   - {property: tag, code: '', writeback: false}
 components:
 - name: label_feature
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {column: LVXQZU}
   data_bindings:
   - {property: tag, code: self.label_feature, writeback: false}
 - name: label_category
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {column: AMJNEG}
   data_bindings:
   - {property: tag, code: self.label_category, writeback: false}
 - name: label_created
-  properties: {}
+  properties: {align: center}
   type: Label
   layout_properties: {column: SKJTQK}
   data_bindings:

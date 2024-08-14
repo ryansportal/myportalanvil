@@ -1,6 +1,6 @@
 allow_embedding: false
-package_name: MyPortal
-name: MyPortal
+package_name: Global_Product_Analysis
+name: Global Product Analysis
 startup_form: null
 renamed: true
 runtime_options:
@@ -97,4 +97,4 @@ db_schema:
 startup: {type: module, module: StartUp}
 native_deps: null
 uplink_visible: true
-metadata: {title: MyPortal}
+metadata: {title: Global Product Analysis}
