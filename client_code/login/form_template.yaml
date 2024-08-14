@@ -28,6 +28,6 @@ components:
   layout_properties: {slot: nav-right}
   components: []
 - name: label_1
-  properties: {text: MyPortal, foreground: 'theme:text'}
+  properties: {text: Global Product Analysis, foreground: 'theme:text'}
   type: Label
   layout_properties: {slot: title}

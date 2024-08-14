@@ -64,7 +64,7 @@ components:
       data_bindings:
       - {property: tag, code: self.drop_down_orderglobal, writeback: false}
     - name: submit_buttonglobal
-      properties: {text: Update, role: elevated-button, background: 'theme:Tertiary', foreground: 'theme:text', align: center}
+      properties: {text: Update, role: outlined-button, background: 'theme:Tertiary', foreground: 'theme:text', align: center}
       type: Button
       layout_properties: {grid_position: 'GEJHWC,IRXQOS'}
       event_bindings: {click: submit_buttonglobal_click}

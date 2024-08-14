@@ -4,7 +4,7 @@ container:
   properties: {auto_display_data: true}
 components:
 - name: label_feature
-  properties: {align: left}
+  properties: {align: center}
   type: Label
   layout_properties: {column: SWLKBK}
   data_bindings:
