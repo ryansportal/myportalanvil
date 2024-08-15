@@ -40,21 +40,21 @@ class Global(GlobalTemplate):
   #Sort and Order
     
   # Initialize dropdowns
-    self.drop_down_sort.items = [("Category", "Category"), ("Created", "Created")]
-    self.drop_down_order.items = [("Ascending", "Ascending"), ("Descending", "Descending")]
+    self.drop_down_sortglobal.items = [("Category", "Category"), ("Created", "Created")]
+    self.drop_down_orderglobal.items = [("Ascending", "Ascending"), ("Descending", "Descending")]
     
         # Bind the update button click event to the method
-    #self.update_button.set_event_handler('click', self.update_sorting_order)
+  #self.update_button.set_event_handler('click', self.update_sorting_order)
 
         # Load initial data
     self.apply_sorting()  
-  def submit_button_click(self, **event_args):
+  def submit_buttonglobal_click(self, **event_args):
         # Apply sorting based on the current dropdown values
    self.apply_sorting()
   def apply_sorting(self):
         # Get selected values from dropdowns
-   sort_field = self.drop_down_sort.selected_value
-   sort_order = self.drop_down_order.selected_value
+   sort_field = self.drop_down_sortglobal.selected_value
+   sort_order = self.drop_down_orderglobal.selected_value
 
         # Ensure we have valid selections
    if not sort_field or not sort_order:
