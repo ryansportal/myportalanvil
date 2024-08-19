@@ -21,15 +21,7 @@ components:
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
-  - name: label_2
-    properties:
-      text: |
-        A Place and a space to view, submit and track feature requests
-      foreground: theme:text
-      font_size: 15
-    type: Label
-    layout_properties: {grid_position: 'ERXZKE,BQCXRU'}
-  - name: text_area_1
+  - name: home_body
     properties:
       role: null
       spacing_above: large
@@ -38,10 +30,13 @@ components:
       spacing_below: large
       auto_expand: true
       font_size: 14
-      height: 467.89453125
-      text: "1. Role and Responsibilities\n\t• Product Manager (PM):\n\t\t○ Vision and Strategy: The PM is responsible for defining the product's vision, strategy, and roadmap. They ensure the product aligns with the company’s overall goals and market needs.\n\t\t○ Cross-functional Leadership: PMs work closely with engineering, design, marketing, and sales teams to bring a product to market. They act as the bridge between different departments.\n\t\t○ Prioritization: They prioritize features, set timelines, and manage the product backlog. PMs decide what gets built and when.\n\t\t○ Stakeholder Management: PMs communicate with stakeholders to align expectations and keep them informed about the product's progress and direction.\n\t\t○ Market Research: They analyze market trends, customer feedback, and competition to shape the product strategy.\n\n\nProduct Manager:\n\t• Strong leadership and communication skills.\n\t• Strategic thinking and problem-solving abilities.\n\t• Good understanding of the market, customers, and competition.\n\t• Ability to manage cross-functional teams and work in a collaborative environment.\nBasic understanding of data analysis and technical concepts.\n"
+      height: 362.75
+      text: "Vision and Strategy: Define the product's vision, strategy, and roadmap. Ensure the product aligns with the company’s overall goals and market needs.\nCross-functional Leadership: Act as the bridge between different departments -  Work closely with dev, design, marketing, sales and client services.\nPrioritization: Prioritize features, set timelines, and manage the product backlog. Decide what gets built and when.\nManagement: Communicate with senior leadership team to align expectations and keep them informed about the product's progress and direction.\nMarket Research: Analyze market trends, customer feedback, and competition. \n\n\n Strong communication and organisational  skills.\n Strategic thinking and problem-solving abilities. Change from reactive to proactive\nGood understanding of the market, customers, competition and the user interface. \nWork collaboratively with multiple departments and territories and pull in the correct resource to avoid issues or delays further down the line. "
     type: TextArea
-    layout_properties: {grid_position: 'WMRQOA,BVHMCL', row_background: 'theme:Tertiary'}
+    layout_properties: {grid_position: 'BIYWCZ,LDVGLQ', full_width_row: false}
+    event_bindings: {change: home_body_change, lost_focus: home_body_lost_focus}
+    data_bindings:
+    - {property: tag, code: 'self.item[''home_body'']', writeback: false}
 - name: grid_panel_1
   properties: {spacing_above: medium, spacing_below: large, visible: true}
   type: GridPanel

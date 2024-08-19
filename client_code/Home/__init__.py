@@ -16,6 +16,16 @@ class Home(HomeTemplate):
    # print(f"This user has logged in: {anvil.users.get_user()['email']}")
 
 
+        # Example data model
+    self.init_components() 
+
+
+    def home_body_change(self, **event_args):
+        # Update the data model with the new text
+        self.item['home_body'] = self.home_body.text
+        
+        # This will automatically update the UI if the text box is bound to self.item['home_body']
+        self.refresh_data_bindings()
 
 
   
@@ -36,6 +46,10 @@ class Home(HomeTemplate):
   def button_logout_click(self, **event_args):
     anvil.users.logout()
     open_form('login')
+
+
+
+
 
 
  
