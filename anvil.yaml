@@ -94,6 +94,14 @@ db_schema:
     - name: details
       admin_ui: {order: 1.5, width: 200}
       type: bool
+  settings:
+    client: full
+    server: full
+    columns:
+    - name: home_body
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: settings
 startup: {type: form, module: Home}
 native_deps: null
 uplink_visible: true

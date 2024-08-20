@@ -31,12 +31,12 @@ components:
       auto_expand: true
       font_size: 14
       height: 362.75
-      text: "Vision and Strategy: Define the product's vision, strategy, and roadmap. Ensure the product aligns with the company’s overall goals and market needs.\nCross-functional Leadership: Act as the bridge between different departments -  Work closely with dev, design, marketing, sales and client services.\nPrioritization: Prioritize features, set timelines, and manage the product backlog. Decide what gets built and when.\nManagement: Communicate with senior leadership team to align expectations and keep them informed about the product's progress and direction.\nMarket Research: Analyze market trends, customer feedback, and competition. \n\n\n Strong communication and organisational  skills.\n Strategic thinking and problem-solving abilities. Change from reactive to proactive\nGood understanding of the market, customers, competition and the user interface. \nWork collaboratively with multiple departments and territories and pull in the correct resource to avoid issues or delays further down the line. "
+      text: "Vision and Strategy: Define the product's vision, strategy, and roadmap. Ensure the product aligns with the company’s overall goals and market needs.\nCross-functional Leadership: Act as the bridge between different departments -  Work closely with dev, design, marketing, sales and client services.\nPrioritization: Prioritize features, set timelines, and manage the product backlog. Decide what gets built and when.\nManagement: Communicate with senior leadership team to align expectations and keep them informed about the product's progress and direction.\nMarket Research: Analyze market trends, customer feedback, and competition. \n\n\n Strong communication and organisational  skills.\n Strategic thinking and problem-solving abilities. Change from reactive to proactive\nGood understanding of the market, customers, competition and the user interface. \nWork collaboratively with multiple departments and territories and pull in the correct resource to avoid issues or delays further down the line. \n"
     type: TextArea
     layout_properties: {grid_position: 'BIYWCZ,LDVGLQ', full_width_row: false}
-    event_bindings: {change: home_body_change, lost_focus: home_body_lost_focus}
+    event_bindings: {change: home_body_change}
     data_bindings:
-    - {property: tag, code: 'self.item[''home_body'']', writeback: false}
+    - {property: tag, code: self.mu_home_body, writeback: false}
 - name: grid_panel_1
   properties: {spacing_above: medium, spacing_below: large, visible: true}
   type: GridPanel
