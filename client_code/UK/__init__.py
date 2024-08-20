@@ -12,7 +12,7 @@ class UK(UKTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
   
-
+#Populate data 1
   # Define the territories to be excluded
     excluded_territories = ["Global", "South Africa", "US & CA"]  # List of territory names to exclude
         
@@ -34,6 +34,83 @@ class UK(UKTemplate):
 
         # Fetch and display items from suggestions_uk based on the filter
     self.repeating_panel_1.items = app_tables.suggestions_uk.search(query_condition)
+
+
+#Sort and Order
+    
+  # Initialize dropdowns
+    self.drop_down_sortglobal.items = [("Category", "Category"), ("Created", "Created")]
+    self.drop_down_orderglobal.items = [("Ascending", "Ascending"), ("Descending", "Descending")]
+    
+        # Bind the update button click event to the method
+  #self.update_button.set_event_handler('click', self.update_sorting_order)
+
+        # Load initial data
+    self.apply_sorting()  
+  def submit_buttonglobal_click(self, **event_args):
+        # Apply sorting based on the current dropdown values
+   self.apply_sorting()
+  def apply_sorting(self):
+        # Get selected values from dropdowns
+   sort_field = self.drop_down_sortglobal.selected_value
+   sort_order = self.drop_down_orderglobal.selected_value
+
+        # Ensure we have valid selections
+   if not sort_field or not sort_order:
+    return
+
+        # Determine the sort order (ascending or descending)
+   ascending = sort_order == "Ascending"
+
+        # Fetch and sort data
+   sorted_data = app_tables.suggestions_uk.search(
+        tables.order_by(sort_field, ascending=ascending)
+        )
+
+        # Update the repeating panel with sorted data
+   self.repeating_panel_1.items = sorted_data
+
+
+#Populate data 2
+  # Define the territories to be excluded
+   excluded_territories = ["Global", "South Africa", "US & CA"]  # List of territory names to exclude
+        
+        # Retrieve the rows to be excluded from the 'territory' table
+   excluded_territory_rows = [app_tables.territory.get(Territory=name) for name in excluded_territories]
+
+        # Filter out None in case some territories are not found
+   excluded_territory_rows = [row for row in excluded_territory_rows if row is not None]
+
+        # Build the query to exclude items linked to the specified territories
+   if excluded_territory_rows:
+            # Create a list of query conditions to exclude
+            exclusion_conditions = [q.all_of(Territory=row) for row in excluded_territory_rows]
+            # Use q.not_ to exclude items linked to any of these territories
+            query_condition = q.not_(q.any_of(*exclusion_conditions))
+   else:
+            # If no territories are found, do not exclude any items
+            query_condition = q.all_of()  # This will match all items
+
+        # Fetch and display items from suggestions_uk based on the filter
+   self.repeating_panel_1.items = app_tables.suggestions_uk.search(query_condition)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 #Nav
   def home_button_click(self, **event_args):
      open_form('Home')

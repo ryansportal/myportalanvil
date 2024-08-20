@@ -38,6 +38,36 @@ components:
       type: Link
       layout_properties: {grid_position: 'JRHJXU,CTINWH'}
       event_bindings: {click: link_4_click}
+  - name: outlined_card_2
+    properties: {role: tonal-card, col_spacing: huge}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'SSCHEN,KARBQI'}
+    components:
+    - name: drop_down_sortglobal
+      properties:
+        items: [Category, Created, Territory]
+        include_placeholder: true
+        placeholder: 'Sort '
+      type: DropDown
+      layout_properties: {grid_position: 'GEJHWC,XAPYZW'}
+      event_bindings: {}
+      data_bindings:
+      - {property: tag, code: self.drop_down_orderglobal, writeback: false}
+    - name: drop_down_orderglobal
+      properties:
+        items: [Ascending, Descending]
+        include_placeholder: false
+        placeholder: ''
+      type: DropDown
+      layout_properties: {grid_position: 'GEJHWC,EGOWOU'}
+      event_bindings: {}
+      data_bindings:
+      - {property: tag, code: self.drop_down_orderglobal, writeback: false}
+    - name: submit_buttonglobal
+      properties: {text: Update, role: outlined-button, background: 'theme:Tertiary', foreground: 'theme:text', align: center}
+      type: Button
+      layout_properties: {grid_position: 'GEJHWC,IRXQOS'}
+      event_bindings: {click: submit_buttonglobal_click}
   - name: data_grid_1
     properties:
       columns:

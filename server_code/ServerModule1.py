@@ -18,9 +18,3 @@ def check_user():
   if user is None:
     raise anvil.users.AuthenticationFailed('user not logged in')
 
-@anvil.server.callable
-def save_home_body_text(updated_text):
- # Try to get the existing row with the name 'home_body'
-    setting = app_tables.settings.get(home_body='home_body')
-
-    setting['home_body'] = updated_text
