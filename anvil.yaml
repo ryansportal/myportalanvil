@@ -1,6 +1,6 @@
 allow_embedding: false
-package_name: Global_Product_Analysis
-name: Global Product Analysis
+package_name: GPM
+name: GPM
 startup_form: null
 renamed: true
 runtime_options:
@@ -105,4 +105,4 @@ db_schema:
 startup: {type: form, module: Home}
 native_deps: null
 uplink_visible: true
-metadata: {title: Global Product Analysis}
+metadata: {title: GPM}
