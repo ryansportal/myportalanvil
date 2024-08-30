@@ -1,21 +1,21 @@
-is_package: true
-container: {type: DataRowPanel}
 components:
-- name: label_category
-  properties: {align: center}
-  type: Label
+- data_bindings:
+  - {code: self.label_category, property: tag, writeback: false}
   layout_properties: {column: PCFXJV}
-  data_bindings:
-  - {property: tag, code: self.label_category, writeback: false}
-- name: label_created
+  name: label_category
   properties: {align: center}
   type: Label
+- data_bindings:
+  - {code: self.label_created, property: tag, writeback: false}
   layout_properties: {column: ILUXDV}
-  data_bindings:
-  - {property: tag, code: self.label_created, writeback: false}
-- name: label_feature
+  name: label_created
   properties: {align: center}
   type: Label
+- data_bindings:
+  - {code: self.label_feature, property: tag, writeback: false}
   layout_properties: {column: TWLMPU}
-  data_bindings:
-  - {property: tag, code: self.label_feature, writeback: false}
+  name: label_feature
+  properties: {align: center}
+  type: Label
+container: {type: DataRowPanel}
+is_package: true

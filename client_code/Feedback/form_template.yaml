@@ -1,109 +1,109 @@
-properties:
-- {name: prop, type: string, default_value: '', important: true, default_binding_prop: true}
-is_package: true
-events:
-- {name: event, default_event: true}
-custom_component: false
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{}', visible: true, background: '', border: '', spacing_above: none, spacing_below: large}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: outlined_card_1
-    properties: {role: tonal-card, border: '', col_widths: '{}', col_spacing: medium, spacing_below: none, background: 'theme:text'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'KESTRK,MJFXVH'}
-    components:
-    - name: label_suggestion
-      properties: {text: Suggestion, align: center, bold: false, role: headline, foreground: '#006187', spacing_below: medium, spacing_above: none}
+- components:
+  - components:
+    - layout_properties: {grid_position: 'WMGBBV,GRPNDQ'}
+      name: label_suggestion
+      properties: {align: center, bold: false, foreground: '#006187', role: headline, spacing_above: none, spacing_below: medium, text: Suggestion}
       type: Label
-      layout_properties: {grid_position: 'WMGBBV,GRPNDQ'}
-    - name: choose_category_copy
-      properties: {text: 'Choose Territory:', foreground: '#006187', icon_align: right, spacing_above: large, align: left}
+    - layout_properties: {grid_position: 'MKGTTW,NKMJKB XDZJLX,HEADQL'}
+      name: choose_category_copy
+      properties: {align: left, foreground: '#006187', icon_align: right, spacing_above: large, text: 'Choose Territory:'}
       type: Label
-      layout_properties: {grid_position: 'MKGTTW,NKMJKB XDZJLX,HEADQL'}
-    - name: choose_category
-      properties: {text: 'Choose category:', foreground: '#006187', icon_align: right, spacing_above: large, align: left}
+    - layout_properties: {grid_position: 'MKGTTW,NKMJKB MFDLCX,CVEPMK'}
+      name: choose_category
+      properties: {align: left, foreground: '#006187', icon_align: right, spacing_above: large, text: 'Choose category:'}
       type: Label
-      layout_properties: {grid_position: 'MKGTTW,NKMJKB MFDLCX,CVEPMK'}
-    - name: dd_territory
+    - layout_properties: {grid_position: 'MKGTTW,LGJUFH EMPKFE,MJJUMF'}
+      name: dd_territory
       properties:
-        role: outlined
-        include_placeholder: true
         align: full
-        placeholder: Please Select
-        spacing_above: large
         background: ''
-        foreground: '#006187'
-        items: [Global, UK, South Africa, US & CA]
         border: ''
+        foreground: '#006187'
+        include_placeholder: true
+        items: [Global, UK, South Africa, US & CA]
+        placeholder: Please Select
+        role: outlined
+        spacing_above: large
       type: DropDown
-      layout_properties: {grid_position: 'MKGTTW,LGJUFH EMPKFE,MJJUMF'}
-    - name: category_dd
-      properties: {placeholder: Please Select, include_placeholder: true, background: '', foreground: '#006187', spacing_above: large, role: outlined, border: '', align: full}
-      type: DropDown
-      layout_properties: {grid_position: 'MKGTTW,LGJUFH XHKODY,HIYGUQ'}
+    - data_bindings:
+      - {code: 'self.item[''type'']', property: tooltip, writeback: false}
       event_bindings: {change: category_dd_change}
-      data_bindings:
-      - {property: tooltip, code: 'self.item[''type'']', writeback: false}
-    - name: suggestion_box
-      properties: {auto_expand: true, role: outlined, background: 'theme:text', foreground: '#006187', placeholder: '', text: '', height: 371, border: ''}
-      type: TextArea
+      layout_properties: {grid_position: 'MKGTTW,LGJUFH XHKODY,HIYGUQ'}
+      name: category_dd
+      properties: {align: full, background: '', border: '', foreground: '#006187', include_placeholder: true, placeholder: Please Select, role: outlined, spacing_above: large}
+      type: DropDown
+    - data_bindings:
+      - {code: 'self.item[''text'']', property: tooltip, writeback: false}
       layout_properties: {grid_position: 'LATQJF,KPZXXE'}
-      data_bindings:
-      - {property: tooltip, code: 'self.item[''text'']', writeback: false}
-    - name: file_loader
-      properties: {foreground: 'theme:text', align: center, background: '#0094d2', spacing_above: large, spacing_below: large, role: filled-button}
+      name: suggestion_box
+      properties: {auto_expand: true, background: 'theme:text', border: '', foreground: '#006187', height: 371, placeholder: '', role: outlined, text: ''}
+      type: TextArea
+    - layout_properties: {grid_position: 'TQRFGE,EEBZOW'}
+      name: file_loader
+      properties: {align: center, background: '#0094d2', foreground: 'theme:text', role: filled-button, spacing_above: large, spacing_below: large}
       type: FileLoader
-      layout_properties: {grid_position: 'TQRFGE,EEBZOW'}
-    - name: submit_button
-      properties: {text: Submit, icon: 'fa:arrow-circle-down', role: filled-button, foreground: 'theme:text', background: '#0094d2'}
-      type: Button
+    - event_bindings: {click: submit_button_click}
       layout_properties: {grid_position: 'OIOFIM,BIEZGS'}
-      event_bindings: {click: submit_button_click}
-- name: label_2
-  properties: {text: Feedback, foreground: 'theme:text'}
+      name: submit_button
+      properties: {background: '#0094d2', foreground: 'theme:text', icon: 'fa:arrow-circle-down', role: filled-button, text: Submit}
+      type: Button
+    layout_properties: {grid_position: 'KESTRK,MJFXVH'}
+    name: outlined_card_1
+    properties: {background: 'theme:text', border: '', col_spacing: medium, col_widths: '{}', role: tonal-card, spacing_below: none}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {background: '', border: '', col_widths: '{}', spacing_above: none, spacing_below: large, visible: true}
+  type: ColumnPanel
+- layout_properties: {slot: title}
+  name: label_2
+  properties: {foreground: 'theme:text', text: Feedback}
   type: Label
-  layout_properties: {slot: title}
-- name: button_logout
-  properties: {text: Log Out, role: tonal-button, foreground: 'theme:text', background: '#0094d2'}
-  type: Button
+- event_bindings: {click: button_logout_click}
   layout_properties: {slot: nav-right}
-  event_bindings: {click: button_logout_click}
-- name: grid_panel_1
-  properties: {spacing_above: medium, spacing_below: large, visible: true}
-  type: GridPanel
-  layout_properties: {slot: left-nav}
-  components:
-  - name: column_panel_2
+  name: button_logout
+  properties: {background: '#0094d2', foreground: 'theme:text', role: tonal-button, text: Log Out}
+  type: Button
+- components:
+  - layout_properties: {col_xs: 0, row: BLGCTD, width_xs: 12}
+    name: column_panel_2
     properties: {}
     type: ColumnPanel
-    layout_properties: {row: BLGCTD, width_xs: 12, col_xs: 0}
-  - name: home_button
-    properties: {text: Home, align: right}
+  - event_bindings: {click: home_button_click}
+    layout_properties: {col_xs: 0, row: TBZIEJ, width_xs: 11}
+    name: home_button
+    properties: {align: right, text: Home}
     type: Link
-    layout_properties: {row: TBZIEJ, width_xs: 11, col_xs: 0}
-    event_bindings: {click: home_button_click}
-  - name: feedback_button
-    properties: {text: Feedback, align: right}
+  - event_bindings: {click: feedback_button_click}
+    layout_properties: {col_xs: 0, row: NRWVAU, width_xs: 11}
+    name: feedback_button
+    properties: {align: right, text: Feedback}
     type: Link
-    layout_properties: {row: NRWVAU, width_xs: 11, col_xs: 0}
-    event_bindings: {click: feedback_button_click}
-  - name: roadmap_buttton
-    properties: {text: RoadMap, align: right}
+  - event_bindings: {click: roadmap_buttton_click}
+    layout_properties: {col_xs: 0, row: OFZZHV, width_xs: 11}
+    name: roadmap_buttton
+    properties: {align: right, text: RoadMap}
     type: Link
-    layout_properties: {row: OFZZHV, width_xs: 11, col_xs: 0}
-    event_bindings: {click: roadmap_buttton_click}
-  - name: payprop_requests_button
-    properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: right}
+  - event_bindings: {click: payprop_requests_button_click}
+    layout_properties: {col_xs: 0, row: FMOMJR, width_xs: 11}
+    name: payprop_requests_button
+    properties: {align: right, col_spacing: medium, icon_align: left, text: PayProp Requests}
     type: Link
-    layout_properties: {row: FMOMJR, width_xs: 11, col_xs: 0}
-    event_bindings: {click: payprop_requests_button_click}
-  - name: image_1
-    properties: {spacing_below: large, spacing_above: large, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: center, background: '', height: '150'}
+  - layout_properties: {col_xs: 2, row: UDTNNS, width_xs: 9}
+    name: image_1
+    properties: {background: '', display_mode: shrink_to_fit, height: '150', horizontal_align: center, source: _/theme/Untitled.png, spacing_above: large, spacing_below: large}
     type: Image
-    layout_properties: {row: UDTNNS, width_xs: 9, col_xs: 2}
+  layout_properties: {slot: left-nav}
+  name: grid_panel_1
+  properties: {spacing_above: medium, spacing_below: large, visible: true}
+  type: GridPanel
 container:
-  type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+custom_component: false
+events:
+- {default_event: true, name: event}
+is_package: true
+properties:
+- {default_binding_prop: true, default_value: '', important: true, name: prop, type: string}

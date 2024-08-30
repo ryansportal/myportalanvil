@@ -1,73 +1,73 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html', background: '', foreground: ''}
 components:
-- name: column_panel_1
+- layout_properties: {slot: top-left-btn}
+  name: column_panel_1
   properties: {}
   type: ColumnPanel
-  layout_properties: {slot: top-left-btn}
-- name: label_1
-  properties: {text: Home, foreground: 'theme:text'}
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {foreground: 'theme:text', text: Home}
   type: Label
-  layout_properties: {slot: title}
-- name: button_logout
-  properties: {text: Log Out, role: tonal-button, foreground: 'theme:text', background: '#0094d2'}
-  type: Button
+- event_bindings: {click: button_logout_click}
   layout_properties: {slot: nav-right}
-  event_bindings: {click: button_logout_click}
-- name: column_panel_3
-  properties: {background: '', role: tonal-card}
-  type: ColumnPanel
-  layout_properties: {slot: default}
-  components:
-  - name: home_body
+  name: button_logout
+  properties: {background: '#0094d2', foreground: 'theme:text', role: tonal-button, text: Log Out}
+  type: Button
+- components:
+  - data_bindings:
+    - {code: self.mu_home_body, property: tag, writeback: false}
+    event_bindings: {}
+    layout_properties: {full_width_row: false, grid_position: 'BIYWCZ,LDVGLQ'}
+    name: home_body
     properties:
-      role: null
-      spacing_above: large
+      auto_expand: true
       background: theme:On Secondary Container
       font: ''
-      spacing_below: large
-      auto_expand: true
       font_size: 14
       height: 362.75
-      text: "Vision and Strategy: Define the product's vision, strategy, and roadmap. Ensure the product aligns with the company’s overall goals and market needs.\nCross-functional Leadership: Act as the bridge between different departments -  Work closely with dev, design, marketing, sales and client services.\nPrioritization: Prioritize features, set timelines, and manage the product backlog. Decide what gets built and when.\nManagement: Communicate with senior leadership team to align expectations and keep them informed about the product's progress and direction.\nMarket Research: Analyze market trends, customer feedback, and competition. \n\n\n Strong communication and organisational  skills.\n Strategic thinking and problem-solving abilities. Change from reactive to proactive\nGood understanding of the market, customers, competition and the user interface. \nWork collaboratively with multiple departments and territories and pull in the correct resource to avoid issues or delays further down the line. \n"
+      role: null
+      spacing_above: large
+      spacing_below: large
+      text: "- Vision and Strategy: Define the product's vision, strategy, and roadmap. - Ensure the product aligns with the company’s overall goals and market needs.\n\n- Cross-functional Leadership: Act as the bridge between different departments -  Work closely with dev, design, marketing, sales and client services.\n\n- Prioritization: Prioritize features, set timelines, and manage the product backlog. Decide what gets built and when.\n\n- Management: Communicate with senior leadership team to align expectations and keep them informed about the product's progress and direction.\n\n- Market Research: Analyze market trends, customer feedback, and competition. \n\n\n Strong communication and organisational  skills.\n Strategic thinking and problem-solving abilities. Change from reactive to proactive\nGood understanding of the market, customers, competition and the user interface. \nWork collaboratively with multiple departments and territories and pull in the correct resource to avoid issues or delays further down the line. \n"
     type: TextArea
-    layout_properties: {grid_position: 'BIYWCZ,LDVGLQ', full_width_row: false}
-    event_bindings: {change: home_body_change}
-    data_bindings:
-    - {property: tag, code: self.mu_home_body, writeback: false}
-- name: grid_panel_1
-  properties: {spacing_above: medium, spacing_below: large, visible: true}
-  type: GridPanel
-  layout_properties: {slot: left-nav}
-  components:
-  - name: column_panel_2
+  layout_properties: {slot: default}
+  name: column_panel_3
+  properties: {background: '', role: tonal-card}
+  type: ColumnPanel
+- components:
+  - layout_properties: {col_xs: 0, row: BLGCTD, width_xs: 12}
+    name: column_panel_2
     properties: {}
     type: ColumnPanel
-    layout_properties: {row: BLGCTD, width_xs: 12, col_xs: 0}
-  - name: home_button
-    properties: {text: Home, align: right}
+  - event_bindings: {click: home_button_click}
+    layout_properties: {col_xs: 0, row: TBZIEJ, width_xs: 11}
+    name: home_button
+    properties: {align: right, text: Home}
     type: Link
-    layout_properties: {row: TBZIEJ, width_xs: 11, col_xs: 0}
-    event_bindings: {click: home_button_click}
-  - name: feedback_button
-    properties: {text: Feedback, align: right}
+  - event_bindings: {click: feedback_button_click}
+    layout_properties: {col_xs: 0, row: NRWVAU, width_xs: 11}
+    name: feedback_button
+    properties: {align: right, text: Feedback}
     type: Link
-    layout_properties: {row: NRWVAU, width_xs: 11, col_xs: 0}
-    event_bindings: {click: feedback_button_click}
-  - name: roadmap_buttton
-    properties: {text: RoadMap, align: right}
+  - event_bindings: {click: roadmap_buttton_click}
+    layout_properties: {col_xs: 0, row: OFZZHV, width_xs: 11}
+    name: roadmap_buttton
+    properties: {align: right, text: RoadMap}
     type: Link
-    layout_properties: {row: OFZZHV, width_xs: 11, col_xs: 0}
-    event_bindings: {click: roadmap_buttton_click}
-  - name: payprop_requests_button
-    properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: right}
+  - event_bindings: {click: payprop_requests_button_click}
+    layout_properties: {col_xs: 0, row: FMOMJR, width_xs: 11}
+    name: payprop_requests_button
+    properties: {align: right, col_spacing: medium, icon_align: left, text: PayProp Requests}
     type: Link
-    layout_properties: {row: FMOMJR, width_xs: 11, col_xs: 0}
-    event_bindings: {click: payprop_requests_button_click}
-  - name: image_1
-    properties: {spacing_below: large, spacing_above: large, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: center, background: '', height: '150'}
+  - layout_properties: {col_xs: 2, row: UDTNNS, width_xs: 9}
+    name: image_1
+    properties: {background: '', display_mode: shrink_to_fit, height: '150', horizontal_align: center, source: _/theme/Untitled.png, spacing_above: large, spacing_below: large}
     type: Image
-    layout_properties: {row: UDTNNS, width_xs: 9, col_xs: 2}
+  layout_properties: {slot: left-nav}
+  name: grid_panel_1
+  properties: {spacing_above: medium, spacing_below: large, visible: true}
+  type: GridPanel
+container:
+  properties: {background: '', foreground: '', html: '@theme:standard-page.html'}
+  type: HtmlTemplate
 custom_component: false
+is_package: true

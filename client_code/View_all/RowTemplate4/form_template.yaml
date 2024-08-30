@@ -1,29 +1,29 @@
-is_package: true
-container:
-  type: DataRowPanel
-  properties: {auto_display_data: true}
 components:
-- name: label_feature
-  properties: {align: center}
-  type: Label
+- data_bindings:
+  - {code: self.label_feature, property: tag, writeback: false}
   layout_properties: {column: SWLKBK}
-  data_bindings:
-  - {property: tag, code: self.label_feature, writeback: false}
-- name: label_category
+  name: label_feature
   properties: {align: center}
   type: Label
+- data_bindings:
+  - {code: self.label_category, property: tag, writeback: false}
   layout_properties: {column: HICYQZ}
-  data_bindings:
-  - {property: tag, code: self.label_category, writeback: false}
-- name: label_created
+  name: label_category
   properties: {align: center}
   type: Label
+- data_bindings:
+  - {code: self.label_created, property: tag, writeback: false}
   layout_properties: {column: WYFSTS}
-  data_bindings:
-  - {property: tag, code: self.label_created, writeback: false}
-- name: label_territory
+  name: label_created
   properties: {align: center}
   type: Label
+- data_bindings:
+  - {code: self.label_territory, property: tag, writeback: false}
   layout_properties: {column: WXZVKD}
-  data_bindings:
-  - {property: tag, code: self.label_territory, writeback: false}
+  name: label_territory
+  properties: {align: center}
+  type: Label
+container:
+  properties: {auto_display_data: true}
+  type: DataRowPanel
+is_package: true

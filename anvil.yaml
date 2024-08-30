@@ -1,108 +1,108 @@
 allow_embedding: false
-package_name: GPM
-name: GPM
-startup_form: null
-renamed: true
-runtime_options:
-  version: 3
-  client_version: '3'
-  server_version: python3-sandbox
-  server_spec: {base: python310-standard}
-  legacy_features: {class_names: true, bootstrap3: true, __dict__: true, root_container: true}
-dependencies: []
-services:
-- source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {auto_create_missing_columns: true}
-- source: /runtime/services/anvil/users.yml
-  client_config: {remember_me_days: 0.02083, use_email: true, use_google: false, use_facebook: false, confirm_email: true, use_token: false, allow_remember_me: true, enable_automatically: true, allow_signup: false, require_secure_passwords: true}
-  server_config: {user_table: users}
 db_schema:
   categories:
-    title: categories
     client: search
-    server: full
     columns:
-    - name: name
-      admin_ui: {width: 200}
+    - admin_ui: {width: 200}
+      name: name
       type: string
-  suggestions_uk:
-    title: suggestions_uk
-    client: full
     server: full
-    columns:
-    - name: feature
-      admin_ui: {width: 200}
-      type: string
-    - name: Category
-      admin_ui: {order: 1, width: 200}
-      type: link_single
-      target: categories
-    - name: created
-      admin_ui: {width: 200}
-      type: datetime
-    - name: Territory
-      admin_ui: {order: 3, width: 200}
-      type: link_single
-      target: territory
-    - name: Created
-      admin_ui: {width: 200, order: 4}
-      type: date
-  territory:
-    title: territory
-    client: full
-    server: full
-    columns:
-    - name: Territory
-      admin_ui: {order: 0, width: 200}
-      type: string
-  users:
-    title: users
-    client: none
-    server: full
-    columns:
-    - name: email
-      admin_ui: {width: 200}
-      type: string
-    - name: enabled
-      admin_ui: {width: 200}
-      type: bool
-    - name: last_login
-      admin_ui: {width: 200}
-      type: datetime
-    - name: password_hash
-      admin_ui: {width: 200}
-      type: string
-    - name: n_password_failures
-      admin_ui: {width: 200}
-      type: number
-    - name: confirmed_email
-      admin_ui: {width: 200}
-      type: bool
-    - name: signed_up
-      admin_ui: {width: 200}
-      type: datetime
-    - name: remembered_logins
-      admin_ui: {width: 200}
-      type: simpleObject
-    - name: email_confirmation_key
-      admin_ui: {width: 200}
-      type: string
-    - name: remembered_logins
-      admin_ui: {width: 200}
-      type: simpleObject
-    - name: details
-      admin_ui: {order: 1.5, width: 200}
-      type: bool
+    title: categories
   settings:
     client: full
-    server: full
     columns:
-    - name: home_body
-      admin_ui: {width: 200, order: 0}
+    - admin_ui: {order: 0, width: 200}
+      name: home_body
       type: string
+    server: full
     title: settings
-startup: {type: form, module: Home}
-native_deps: null
-uplink_visible: true
+  suggestions_uk:
+    client: full
+    columns:
+    - admin_ui: {width: 200}
+      name: feature
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: Category
+      target: categories
+      type: link_single
+    - admin_ui: {width: 200}
+      name: created
+      type: datetime
+    - admin_ui: {order: 3, width: 200}
+      name: Territory
+      target: territory
+      type: link_single
+    - admin_ui: {order: 4, width: 200}
+      name: Created
+      type: date
+    server: full
+    title: suggestions_uk
+  territory:
+    client: full
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: Territory
+      type: string
+    server: full
+    title: territory
+  users:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: email
+      type: string
+    - admin_ui: {width: 200}
+      name: enabled
+      type: bool
+    - admin_ui: {width: 200}
+      name: last_login
+      type: datetime
+    - admin_ui: {width: 200}
+      name: password_hash
+      type: string
+    - admin_ui: {width: 200}
+      name: n_password_failures
+      type: number
+    - admin_ui: {width: 200}
+      name: confirmed_email
+      type: bool
+    - admin_ui: {width: 200}
+      name: signed_up
+      type: datetime
+    - admin_ui: {width: 200}
+      name: remembered_logins
+      type: simpleObject
+    - admin_ui: {width: 200}
+      name: email_confirmation_key
+      type: string
+    - admin_ui: {width: 200}
+      name: remembered_logins
+      type: simpleObject
+    - admin_ui: {order: 1.5, width: 200}
+      name: details
+      type: bool
+    server: full
+    title: users
+dependencies: []
 metadata: {title: GPM}
+name: GPM
+native_deps: null
+package_name: GPM
+renamed: true
+runtime_options:
+  client_version: '3'
+  legacy_features: {__dict__: true, bootstrap3: true, class_names: true, root_container: true}
+  server_spec: {base: python310-standard}
+  server_version: python3-sandbox
+  version: 3
+services:
+- client_config: {}
+  server_config: {auto_create_missing_columns: true}
+  source: /runtime/services/tables.yml
+- client_config: {allow_remember_me: true, allow_signup: false, confirm_email: true, enable_automatically: true, remember_me_days: 0.02083, require_secure_passwords: true, use_email: true, use_facebook: false, use_google: false, use_token: false}
+  server_config: {user_table: users}
+  source: /runtime/services/anvil/users.yml
+startup: {module: StartUp, type: module}
+startup_form: null
+uplink_visible: true

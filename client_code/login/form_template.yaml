@@ -1,33 +1,33 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {background: ''}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: outlined_card_1
-    properties: {role: elevated-card, background: 'theme:text'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'FEJOXJ,WIIUXL'}
-    components:
-    - name: button_login
-      properties: {role: tonal-button, spacing_above: large, background: '#0094d2', icon: '', underline: false, foreground: '#ffffff', spacing_below: large, italic: false, text: Sign Up / Log In}
-      type: Button
+- components:
+  - components:
+    - event_bindings: {click: button_login_click}
       layout_properties: {grid_position: 'DEEGNI,CPMFOW'}
-      event_bindings: {click: button_login_click}
-    - name: image_1
-      properties: {spacing_below: large, spacing_above: large, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: center, background: '', height: '150'}
+      name: button_login
+      properties: {background: '#0094d2', foreground: '#ffffff', icon: '', italic: false, role: tonal-button, spacing_above: large, spacing_below: large, text: Sign Up / Log In, underline: false}
+      type: Button
+    - layout_properties: {grid_position: 'NCBECM,DSREKG'}
+      name: image_1
+      properties: {background: '', display_mode: shrink_to_fit, height: '150', horizontal_align: center, source: _/theme/Untitled.png, spacing_above: large, spacing_below: large}
       type: Image
-      layout_properties: {grid_position: 'NCBECM,DSREKG'}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
+    layout_properties: {grid_position: 'FEJOXJ,WIIUXL'}
+    name: outlined_card_1
+    properties: {background: 'theme:text', role: elevated-card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {background: ''}
+  type: ColumnPanel
+- components: []
   layout_properties: {slot: nav-right}
-  components: []
-- name: label_1
-  properties: {text: Global Product Analysis, foreground: 'theme:text'}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {foreground: 'theme:text', text: Global Product Analysis}
   type: Label
-  layout_properties: {slot: title}
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

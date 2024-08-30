@@ -1,56 +1,73 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
+- components:
+  - components:
+    - components:
+      - name: repeating_panel_1
+        properties: {item_template: RoadMap.RowTemplate6}
+        type: RepeatingPanel
+      layout_properties: {}
+      name: data_grid_1
+      properties:
+        columns:
+        - {data_key: column_1, id: JKSDUP, title: Column 1}
+        - {data_key: column_2, id: VJQQOR, title: Column 2}
+        - {data_key: column_3, id: OJLQEN, title: Column 3}
+      type: DataGrid
+    layout_properties: {grid_position: 'QNXRPB,ZEERTS'}
+    name: data_row_panel_1
+    properties: {}
+    type: DataRowPanel
   layout_properties: {slot: default}
-  components: []
-- type: FlowPanel
+  name: content_panel
   properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
-  components:
-  - name: button_logout
-    properties: {text: Log Out, role: tonal-button, foreground: 'theme:text', background: '#0094d2'}
+  type: ColumnPanel
+- components:
+  - event_bindings: {click: button_logout_click}
+    name: button_logout
+    properties: {background: '#0094d2', foreground: 'theme:text', role: tonal-button, text: Log Out}
     type: Button
-    event_bindings: {click: button_logout_click}
-- name: label_1
-  properties: {text: RoadMap, foreground: 'theme:text'}
+  layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {foreground: 'theme:text', text: RoadMap}
   type: Label
-  layout_properties: {slot: title}
-- name: grid_panel_1
-  properties: {spacing_above: medium, spacing_below: large, visible: true}
-  type: GridPanel
-  layout_properties: {slot: left-nav}
-  components:
-  - name: column_panel_2
+- components:
+  - layout_properties: {col_xs: 0, row: BLGCTD, width_xs: 12}
+    name: column_panel_2
     properties: {}
     type: ColumnPanel
-    layout_properties: {row: BLGCTD, width_xs: 12, col_xs: 0}
-  - name: home_button
-    properties: {text: Home, align: right}
+  - event_bindings: {click: home_button_click}
+    layout_properties: {col_xs: 0, row: TBZIEJ, width_xs: 11}
+    name: home_button
+    properties: {align: right, text: Home}
     type: Link
-    layout_properties: {row: TBZIEJ, width_xs: 11, col_xs: 0}
-    event_bindings: {click: home_button_click}
-  - name: feedback_button
-    properties: {text: Feedback, align: right}
+  - event_bindings: {click: feedback_button_click}
+    layout_properties: {col_xs: 0, row: NRWVAU, width_xs: 11}
+    name: feedback_button
+    properties: {align: right, text: Feedback}
     type: Link
-    layout_properties: {row: NRWVAU, width_xs: 11, col_xs: 0}
-    event_bindings: {click: feedback_button_click}
-  - name: roadmap_buttton
-    properties: {text: RoadMap, align: right}
+  - event_bindings: {click: roadmap_buttton_click}
+    layout_properties: {col_xs: 0, row: OFZZHV, width_xs: 11}
+    name: roadmap_buttton
+    properties: {align: right, text: RoadMap}
     type: Link
-    layout_properties: {row: OFZZHV, width_xs: 11, col_xs: 0}
-    event_bindings: {click: roadmap_buttton_click}
-  - name: payprop_requests_button
-    properties: {text: PayProp Requests, icon_align: left, col_spacing: medium, align: right}
+  - event_bindings: {click: payprop_requests_button_click}
+    layout_properties: {col_xs: 0, row: FMOMJR, width_xs: 11}
+    name: payprop_requests_button
+    properties: {align: right, col_spacing: medium, icon_align: left, text: PayProp Requests}
     type: Link
-    layout_properties: {row: FMOMJR, width_xs: 11, col_xs: 0}
-    event_bindings: {click: payprop_requests_button_click}
-  - name: image_1
-    properties: {spacing_below: large, spacing_above: large, source: _/theme/Untitled.png, display_mode: shrink_to_fit, horizontal_align: center, background: '', height: '150'}
+  - layout_properties: {col_xs: 2, row: UDTNNS, width_xs: 9}
+    name: image_1
+    properties: {background: '', display_mode: shrink_to_fit, height: '150', horizontal_align: center, source: _/theme/Untitled.png, spacing_above: large, spacing_below: large}
     type: Image
-    layout_properties: {row: UDTNNS, width_xs: 9, col_xs: 2}
+  layout_properties: {slot: left-nav}
+  name: grid_panel_1
+  properties: {spacing_above: medium, spacing_below: large, visible: true}
+  type: GridPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true
