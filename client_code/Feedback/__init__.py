@@ -41,7 +41,8 @@ class Feedback(FeedbackTemplate):
       anvil.server.call(
         "add_suggestion", self.suggestion_box.text, self.category_dd.selected_value, self.dd_territory.selected_value
       )
-      alert("Form submitted")
+      n = Notification("Form submitted")
+      n.show()
       self.clear_inputs()
 
 

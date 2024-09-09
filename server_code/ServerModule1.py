@@ -13,6 +13,7 @@ def add_suggestion(feature, Category, Territory):
   app_tables.suggestions_uk.add_row(feature=feature, Category=Category, Created=date.today(), Territory=Territory)
 
 @anvil.server.callable
+
 def check_user():
   user = anvil.users.get_user()
   if user is None:
